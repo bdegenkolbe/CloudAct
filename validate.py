@@ -7,7 +7,7 @@ Prüft: Gliederung, Nummerierung, Querverweise, Quellen, Versionskonsistenz, For
 import re
 import sys
 
-DOCUMENT = "CLOUD_Act_Analyse_HIGL_2026.md"
+DOCUMENT = "Wolkenfrei.md"
 
 
 def load_document():

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * build_docx.js — Generates a professional DOCX from CLOUD_Act_Analyse_HIGL_2026.md
+ * build_docx.js — Generates a professional DOCX from Wolkenfrei.md
  * Uses the docx npm library and follows Formatvorlage.md design specs.
  */
 
@@ -33,8 +33,8 @@ const {
 
 // ---------- Configuration ----------
 
-const INPUT_FILE = path.join(__dirname, "CLOUD_Act_Analyse_HIGL_2026.md");
-const OUTPUT_FILE = path.join(__dirname, "CLOUD_Act_Analyse_HIGL_2026.docx");
+const INPUT_FILE = path.join(__dirname, "Wolkenfrei.md");
+const OUTPUT_FILE = path.join(__dirname, "Wolkenfrei.docx");
 
 const COLORS = {
   primary: "1B3A5C",

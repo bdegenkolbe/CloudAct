@@ -33,8 +33,8 @@ Keine.
 
 ### Export
 
-- PDF erstellt: ✅ (CLOUD_Act_Analyse_HIGL_2026.pdf)
-- Word erstellt: ✅ (CLOUD_Act_Analyse_HIGL_2026.docx, 140 KB)
+- PDF erstellt: ✅ (Wolkenfrei.pdf)
+- Word erstellt: ✅ (Wolkenfrei.docx, 140 KB)
 
 ### Abschluss
 

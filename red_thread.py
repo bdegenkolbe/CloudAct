@@ -7,7 +7,7 @@ Prüft: Kapitel-Funktionen, Querverweisstruktur, inhaltliche Abgrenzung.
 import re
 import sys
 
-DOCUMENT = "CLOUD_Act_Analyse_HIGL_2026.md"
+DOCUMENT = "Wolkenfrei.md"
 
 # Expected chapter functions (thematische Zuordnung)
 CHAPTER_FUNCTIONS = {
