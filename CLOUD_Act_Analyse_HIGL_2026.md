@@ -3,7 +3,7 @@
 
 **Autor:** Björn Degenkolbe, Geschäftsführer · 4K Analytics GmbH / HIGL – Health Innovators Group Leipzig  
 **Stand:** April 2026  
-**Version:** 13.0 — April 2026 · 161 Quellen · 18 Kapitel  
+**Version:** 13.0 — April 2026 · 173 Quellen · 18 Kapitel  
 **Zweck:** Wissensgrundlage für GKV (Gesetzliche Krankenversicherung)/KV (Kassenärztliche Vereinigung)/Klinik-IT-Beratung, LinkedIn-Content, interne Architekturentscheidungen  
 **Hinweis:** Dieses Dokument basiert auf öffentlich verfügbaren Quellen, wurde mit Claude (Anthropic) erstellt und stellt keine Rechtsberatung dar.
 
@@ -1840,9 +1840,6 @@ Zwölf Kernaussagen:
 - [84] LUMI: TildeOpen 30B-Parameter-Modell auf LUMI trainiert (Sept. 2025): https://lumi-supercomputer.eu/tildeopen/
 - [85] OpenEuroLLM: Erster strategischer Zugang zu LUMI/Leonardo/JUPITER (Dez. 2025): https://www.ai.se/en/news/openeurollm-takes-next-step-european-ai-sovereignty
 
----
-
-*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen. Es stellt keine Rechtsberatung dar.*
 ### US-Beratungspartnerschaften und Interessenkonflikte
 
 - [86] Avanade GmbH: "About Avanade — Joint Venture Accenture & Microsoft", avanade.com/en-us/about-avanade, abgerufen April 2026. 50.000 Mitarbeitende, gegründet April 2000.
@@ -1932,6 +1929,27 @@ Zwölf Kernaussagen:
 - [160] Arvato Systems Blog: "Digitalization for health insurers: at the Google Cloud Summit South", Juni 2024. Kubus IT als Nachweis Google Cloud + souveräne GKV-IT; Sovereign Cloud Diskussion; Panel Google Cloud Summit München Juni 2024.
 - [161] e-health-com.de: "adesso wird Cloud-Transformationspartner für das ITSC", 2024. ITSC → OVHcloud (FR, EU-souverän); Projektstart Mai 2024; siebenstelliges Budget; adesso als Migrationspartner.
 
+### US-Sanktionen und digitale Abhängigkeit
+
+- [162] HateAid: Pressemitteilung, 14. Januar 2026. US-Sanktionierung der HateAid-Geschäftsführerinnen Josephine Ballon und Anna-Lena von Hodenberg durch US-Außenminister Rubio.
+- [163] CNN: "US sanctions European officials and activists over online censorship concerns", 24. Dezember 2025. Berichterstattung zur HateAid-Sanktionierung, EU-Kommissar Breton, britische Anti-Desinformations-Organisationen.
+- [164] The Local: "US sanctions two German anti-hate speech activists", 24. Dezember 2025. Reaktion Bundesregierung; Bundestags-Vizepräsident Nouripour fordert Einbestellung des US-Geschäftsträgers.
+- [165] MIT Technology Review: "What happens when the US sanctions you — and you depend on US tech", 19. Januar 2026. Fallstudie ICC-Richter: Verlust des Zugangs zu Microsoft, Amazon, Gmail, Visa, Mastercard nach Sanktionierung.
+
+### GKV-/KV-Infrastruktur und Ausschreibungen
+
+- [166] govdigital.de: "BITMARCK tritt govdigital bei", Oktober 2024. BITMARCK govdigital-Beitritt; Kontext BITMARCK-all-in-ONE-Programm.
+- [167] BITMARCK: Kundentag 2025. Strategiepräsentation Cloud-Migration und SAP S/4HANA-Roadmap.
+- [168] kvno.de: "KV-IT GmbH", kvno.de/kv-it-gmbh, abgerufen April 2026. Gemeinsame IT-Gesellschaft KVWL/KVNO in Düsseldorf/Dortmund.
+- [169] TED: Ausschreibung 98706-2026, EU-Amtsblatt S 29/2026, 11. Februar 2026. KVNO-Ausschreibung X-KVNO-2025-0023: "Entwicklung und Betrieb einer KI-Plattform als PaaS-Lösung" auf Azure Cloud.
+- [170] BMG: Pressemitteilung, Oktober 2025. FDZ Gesundheit beim BfArM: Betriebsstart, GKV-Abrechnungsdaten 2009–2023 von 73 Mio. Versicherten.
+
+### Weitere Marktbeispiele
+
+- [171] zaronews.world: Pressemitteilung HBSN AG, Juni 2018. MDK-Gemeinschaft: europaweites Vergabeverfahren, Konsortium HBSN/EWERK RZ/MOBIL ISC.
+- [172] Charité — Universitätsmedizin Berlin: Pressemitteilung, Dezember 2025. Vergabe KIS-Neubeschaffung an Epic Systems (Verona, WI); 200 Mio. EUR / 10 Jahre; Implementierung bis Ende 2029.
+- [173] Energieforen Leipzig / EWERK: Zertifizierungsseite, abgerufen April 2026. EWERK ISO 27001, ISO 20000, ISAE 3402 Typ II; BSI C5 Typ 2 in Vorbereitung. Ergänzend: Trusted Cloud, EWERK Digital Profil.
+
 ---
 
-*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 13.0, April 2026. 161 Quellen. Es stellt keine Rechtsberatung dar.*
+*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 13.0, April 2026. 173 Quellen. Es stellt keine Rechtsberatung dar.*

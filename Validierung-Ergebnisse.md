@@ -19,7 +19,7 @@
 | 2.2.4 Ausgewogenheit | ✅ | Anbieter gleichgewichtig, Reklassifizierungen nachvollziehbar begründet |
 | 2.3.1 Tippfehler und Grammatik | ❌ → ✅ | Zeile 444: „demselben Konzernmutter" → „derselben" (fem. Dativ); korrigiert |
 | 2.3.2 Terminologie | ❌ → ✅ | ePA erst bei Zeile 1641 definiert (Erstnennung Zeile 131) → Definition vorangestellt; MSP nirgends definiert → Definition bei Erstnennung ergänzt; §393 → § 393 (DIN 5008) an 13 Stellen korrigiert |
-| 2.4.1 Vollständigkeit und Nummerierung | ✅ | 161 Quellen, lückenlos [1]–[161], Zähler in Kopf und Abschlusssatz konsistent |
+| 2.4.1 Vollständigkeit und Nummerierung | ❌ → ✅ | 161 Quellen → 12 fehlende nachgetragen → 173 Quellen [1]–[173], Zähler aktualisiert |
 | 2.4.2 Formale Einheitlichkeit | ✅ | Quellen ab [86] verwenden bibliographisches Format ohne vollständige URL — bewusste Formatänderung ab Ergänzungsblock, akzeptabel |
 | 2.4.3 Thematische Sektionierung | ✅ | Sektionsüberschriften korrekt; Disclaimer-Satz nach [85] unterbricht Quellenfluss — kein Fehler, aber zur Kenntnis genommen |
 | 2.4.4 Aktualität und Belastbarkeit | ✅ | Primärquellen für CLOUD Act [1], BMI-Gutachten [2], § 393 SGB V [6]; Wikipedia-Quellen ([13], [14], [40]) durch Fachquellen ergänzt |
@@ -39,6 +39,8 @@
 | 5 | 13 Stellen | §393 ohne Leerzeichen nach § (DIN 5008: „§ 393") | Gering |
 | 6 | §5.5, Zeile 410 | Typ A/B/C (§5.4) und Konstellation A/B/C (Kap. 2/§5.5) verwenden gleiche Buchstaben für verschiedene Konzepte — kein Mapping dokumentiert | Mittel |
 | 7 | 7 Stellen | 3+ aufeinanderfolgende Leerzeilen (überflüssige Formatierung) | Gering |
+| 8 | §18, nach [85] | Verwaister Disclaimer „Dieses Dokument basiert…" trennt Quellenverzeichnis in zwei Hälften (Relikt aus früherer Version) | Mittel |
+| 9 | 12 Stellen im Fließtext | [Quelle:]-Verweise ohne korrespondierenden Eintrag im Quellenverzeichnis (HateAid, MIT Tech Review, TED 98706, Charité, u.a.) | Mittel |
 
 ### Durchgeführte Bereinigungen
 
@@ -51,6 +53,8 @@
 | 5 | §393 → § 393 | Alle 13 Vorkommen per replace_all korrigiert | ✅ |
 | 6 | Typ↔Konstellation-Mapping | Erläuternde Mapping-Box in §5.5 eingefügt | ✅ |
 | 7 | Überflüssige Leerzeilen | Alle 7 Stellen mit 3+ Leerzeilen auf max. 2 reduziert | ✅ |
+| 8 | Verwaister Disclaimer nach [85] | Disclaimer + Trennlinie entfernt; Quellenverzeichnis durchgängig | ✅ |
+| 9 | 12 fehlende Quelleneinträge | [162]–[173] nachgetragen: HateAid/CNN/The Local, MIT Tech Review, govdigital/BITMARCK, KVNO/TED, zaronews/HBSN, Charité, BMG FDZ, EWERK; Quellenzähler 161 → 173 | ✅ |
 
 ### Nachprüfung
 
