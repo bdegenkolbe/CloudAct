@@ -2,3 +2,4 @@ node_modules/
 site/
 docs/*.md
 !docs/stylesheets/
+__pycache__/
