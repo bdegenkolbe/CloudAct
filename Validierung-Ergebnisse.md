@@ -2,6 +2,37 @@
 
 ---
 
+## Validierung 09.04.2026 — Version 18.0 → Version 20.0
+
+### Änderungen (3 Iterationen)
+
+1. **Averbis von 🟢 auf 🟡:** Architekturdiagramm zeigt Medical Summary nutzt Azure OpenAI (EU Datazone). Health Discovery (NLP) bleibt on-premise souverän, Arztbrief-KI auf Azure OpenAI = Microsoft-CLOUD-Act-Risiko.
+
+2. **myScribe von 🟢 auf 🟡:** "Eigenentwickeltes NLP" nicht verifizierbar. Startup mit ~14 MA, das Fließtext-Arztbriefe in Sekunden generiert — US-LLM im Backend wahrscheinlich. KI-Backend nicht öffentlich dokumentiert.
+
+3. **hAIppokrates (Greenbay Healthcare, UKL Leipzig) als 🟢 ergänzt:** GPT + Whisper vollständig on-premise im UKL-Rechenzentrum. Arztbriefe und Transkription mit allen Patientendaten lokal. Pilotphase 100+ Nutzer, im Roll-out. Transparenzhinweis: Greenbay/4K Analytics = Herausgeber-Unternehmensverbund.
+
+**Neues Fazit §7.5:** "Der Unterschied ist nicht das Modell — sondern wo es läuft." Kein Anbieter außer hAIppokrates arbeitet nachweislich ohne US-KI-Backend für generative Funktionen.
+
+### Prüfergebnis
+
+| Prüfschritt | Ergebnis |
+|---|---|
+| validate.py | ✅ 0 Fehler, 189 Quellen, v20.0 konsistent |
+| red_thread.py | ✅ 0 Fehler, 9 Warnungen (informativ) |
+
+### Export
+
+- PDF erstellt: ✅
+- Word erstellt: ✅ (159 KB)
+
+### Abschluss
+
+- Version: 20.0
+- Fallbeispiele-Tabelle: 7 Anbieter (1× 🔴, 5× 🟡, 1× 🟢)
+
+---
+
 ## Validierung 09.04.2026 — Version 17.0 → Version 18.0
 
 ### Änderungen

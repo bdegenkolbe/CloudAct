@@ -3,7 +3,7 @@
 
 **Autor:** Björn Degenkolbe, Geschäftsführer · 4K Analytics GmbH / HIGL – Health Innovators Group Leipzig  
 **Stand:** April 2026  
-**Version:** 19.0 — April 2026 · 189 Quellen · 18 Kapitel  
+**Version:** 20.0 — April 2026 · 189 Quellen · 18 Kapitel  
 **Zweck:** Wissensgrundlage für GKV (Gesetzliche Krankenversicherung)/KV (Kassenärztliche Vereinigung)/Klinik-IT-Beratung, LinkedIn-Content, interne Architekturentscheidungen  
 **Hinweis:** Dieses Dokument basiert auf öffentlich verfügbaren Quellen, wurde mit Claude (Anthropic) erstellt und stellt keine Rechtsberatung dar.
 
@@ -2192,4 +2192,4 @@ Zwölf Kernaussagen:
 
 ---
 
-*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 19.0, April 2026. 189 Quellen. Es stellt keine Rechtsberatung dar.*
+*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 20.0, April 2026. 189 Quellen. Es stellt keine Rechtsberatung dar.*
