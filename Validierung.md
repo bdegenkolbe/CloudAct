@@ -227,7 +227,7 @@ Jeder Block bleibt dauerhaft stehen. Die Historie wird nicht gelöscht.
 
 | Datei | Zweck |
 |---|---|
-| `CLOUD_Act_Analyse_HIGL_2026.md` | Hauptdokument |
+| `Wolkenfrei.md` | Hauptdokument |
 | `Validierung.md` | Dieses Dokument — Prüfprozess |
 | `Validierung-Ergebnisse.md` | Protokoll aller Validierungen, Fehler und Bereinigungen |
 | `validate.py` | Automatisierte Strukturprüfung |

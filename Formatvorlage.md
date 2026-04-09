@@ -131,4 +131,4 @@ Textausrichtung Fließtext: Blocksatz.
 | Word (.docx) | `build_docx.js` | docx (npm) |
 | PDF (.pdf) | `build_pdf.py` | reportlab (pip) |
 
-Beide Skripte lesen das Hauptdokument (`CLOUD_Act_Analyse_HIGL_2026.md`) und erzeugen den Export gemäß dieser Formatvorlage. Bei Änderungen an der Formatvorlage müssen beide Skripte entsprechend angepasst werden.
+Beide Skripte lesen das Hauptdokument (`Wolkenfrei.md`) und erzeugen den Export gemäß dieser Formatvorlage. Bei Änderungen an der Formatvorlage müssen beide Skripte entsprechend angepasst werden.

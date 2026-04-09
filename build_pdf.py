@@ -18,8 +18,8 @@ from reportlab.platypus import (
 from reportlab.platypus.doctemplate import PageTemplate, BaseDocTemplate, Frame
 from reportlab.lib.fonts import addMapping
 
-DOCUMENT = "CLOUD_Act_Analyse_HIGL_2026.md"
-OUTPUT = "CLOUD_Act_Analyse_HIGL_2026.pdf"
+DOCUMENT = "Wolkenfrei.md"
+OUTPUT = "Wolkenfrei.pdf"
 
 # Colors
 NAVY = HexColor("#1B3A5C")

@@ -16,7 +16,7 @@ Dieses Projekt pflegt ein umfassendes Analysedokument zur CLOUD-Act-Exposition d
 
 | Datei | Zweck |
 |---|---|
-| `CLOUD_Act_Analyse_HIGL_2026.md` | Hauptdokument |
+| `Wolkenfrei.md` | Hauptdokument |
 | `Validierung.md` | Prüfprozess — regelt Ablauf, Prüfschritte und Versionierung |
 | `Validierung-Ergebnisse.md` | Historisches Protokoll aller Validierungen |
 | `Formatvorlage.md` | Gestaltungsrichtlinie für PDF- und Word-Export |
