@@ -2,6 +2,32 @@
 
 ---
 
+## Validierung 09.04.2026 — Version 17.0 → Version 18.0
+
+### Änderungen
+
+§7.5 erweitert um **vier Fallbeispiele** konkreter Gesundheits-KI-Produkte mit CLOUD-Act-Risikobewertung:
+- Plaud AI (🔴 CN/US, dreifache Exposition: CN-Eigentümer + AWS Oregon + OpenAI)
+- Tandem Health (🟡 SE, EU-Firma mit OpenAI-Backend, Details zur EU-Verarbeitung offen)
+- Doctolib (🟡 FR/AWS, C5 Typ 2, Verschlüsselung mit HashiCorp HSM, strukturelles Restrisiko)
+- Averbis (🟢 DE, On-Premise-NLP, eigene Engine, kein US-KI-Abhängigkeit — Referenzbeispiel)
+
+Vergleichstabelle mit § 393-Eignungsbewertung ergänzt.
+
+### Prüfergebnis
+
+| Prüfschritt | Ergebnis |
+|---|---|
+| validate.py | ✅ 0 Fehler, 189 Quellen, v18.0 konsistent |
+| red_thread.py | ✅ 0 Fehler, 9 Warnungen (informativ) |
+
+### Export
+
+- PDF erstellt: ✅
+- Word erstellt: ✅ (157 KB)
+
+---
+
 ## Validierung 09.04.2026 — Version 16.0 → Version 17.0
 
 ### Änderungen

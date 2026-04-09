@@ -3,7 +3,7 @@
 
 **Autor:** Björn Degenkolbe, Geschäftsführer · 4K Analytics GmbH / HIGL – Health Innovators Group Leipzig  
 **Stand:** April 2026  
-**Version:** 17.0 — April 2026 · 189 Quellen · 18 Kapitel  
+**Version:** 18.0 — April 2026 · 189 Quellen · 18 Kapitel  
 **Zweck:** Wissensgrundlage für GKV (Gesetzliche Krankenversicherung)/KV (Kassenärztliche Vereinigung)/Klinik-IT-Beratung, LinkedIn-Content, interne Architekturentscheidungen  
 **Hinweis:** Dieses Dokument basiert auf öffentlich verfügbaren Quellen, wurde mit Claude (Anthropic) erstellt und stellt keine Rechtsberatung dar.
 
@@ -882,6 +882,27 @@ Das Problem: Integrationsplattformen sind **Datendrehscheiben**. Sie lesen, tran
 Die ersten drei blinden Flecken (Snowflake, Oracle Health, Qlik Cloud — §7.4) betreffen klassische Datenhaltung und Analytics. Der vierte blinde Fleck ist gravierender: **KI-Dienste verarbeiten die sensibelsten Daten im Gesundheitswesen — Arzt-Patienten-Gespräche, Diagnosen, Behandlungsverläufe — zwangsläufig im Klartext.** Clientseitige Verschlüsselung, die bei Datenspeichern funktioniert, versagt hier strukturell. Wer eine Transkriptions-KI oder einen Arztbrief-Generator auf Azure OpenAI, Google Gemini oder AWS Bedrock betreibt, übergibt die unverschlüsselten Rohdaten an eine CLOUD-Act-exponierte Infrastruktur.
 
 **Die souveräne Alternative existiert:** Mistral-Modelle (oder vergleichbare Open-Source-LLMs) lassen sich über vLLM auf STACKIT, plusserver oder eigenem GPU-Cluster betreiben — vollständig innerhalb EU-Jurisdiktion, ohne API-Calls an US-Anbieter. Für Sprachtranskription: Whisper (OpenAI, aber Open-Source-Modell, lokal deploybar) auf eigener GPU. Für Integrationsplattformen: n8n (self-hosted, Berlin) statt Zapier. Der Funktionsumfang ist für 80 % der Gesundheits-KI-Anwendungsfälle ausreichend — und wächst mit jeder Mistral/Llama-Generation.
+
+#### Vier Fallbeispiele — das Spektrum von 🔴 bis 🟢
+
+Die Theorie wird greifbar an konkreten Produkten, die heute im deutschen Gesundheitswesen eingesetzt werden oder werden sollen:
+
+**Plaud AI (CN/US) — 🔴 Dreifache Exposition.** Plaud ist ein chinesisches Unternehmen (Shenzhen), das KI-gestützte Aufnahmegeräte für Arzt-Patienten-Gespräche vermarktet. Die Audiodaten werden zur Transkription an AWS US West (Oregon) übertragen und dort über OpenAI Whisper V3 und GPT verarbeitet. Plaud wirbt mit GDPR-Compliance, SOC 2 und HIPAA — verschweigt aber die strukturelle Dreifachexposition: chinesischer Eigentümer (CN-Datengesetze), US-Cloud-Infrastruktur (AWS Oregon, CLOUD Act) und US-KI-Backend (OpenAI). "Zero Data Retention" beim LLM-Provider bedeutet: nicht gespeichert nach Verarbeitung — aber während der Verarbeitung liegt die Stimme des Patienten im Klartext auf US-Servern. Für Gesundheitsdaten nach § 393 SGB V: nicht geeignet.
+
+**Tandem Health (SE) — 🟡 EU-Firma mit US-KI-Backend.** Tandem Health (Stockholm, $50 Mio. Funding) ist ein schwedisches Unternehmen, das KI-gestützte Dokumentation für Kliniken anbietet — aktuell expandierend nach Deutschland (Partnerschaft mit Eterno). Tandem nutzt OpenAI Whisper für Transkription und GPT-4 für Zusammenfassung. Audio wird nach Transkription gelöscht, keine Modeltraining auf Patientendaten (ISO 27001, ISO 13485, GDPR). Alle Daten sollen "ausschließlich in europäischen Rechenzentren" verarbeitet werden. Die offene Frage: Ob die OpenAI-Modelle via Azure OpenAI EU (Microsoft-Jurisdiktion, vgl. §5.3) oder über die direkte OpenAI-API (US-Server) angebunden sind, ist nicht öffentlich dokumentiert. Im besten Fall (Azure EU): Microsoft-CLOUD-Act-Restrisiko wie bei den KI-Brokern. Im schlechtesten Fall (direkte API): US-Serververarbeitung.
+
+**Doctolib (FR/AWS) — 🟡 Strukturelles Restrisiko trotz Verschlüsselung.** Doctolib (Paris, bereits in §12.5 bewertet) hostet auf AWS Frankfurt und Paris, hat BSI C5 Typ 2 seit 2025 und verschlüsselt Gesundheitsdaten zusätzlich auf Applikationsebene (AES-256, HSM-Schlüsseltrennung über HashiCorp). Ein französisches Gericht wertete dies 2021 als ausreichend. Aber: AWS (NASDAQ: AMZN) unterliegt dem CLOUD Act, HashiCorp (NYSE: HCP) ebenfalls — Serverstandort Frankfurt ändert die Jurisdiktion über den Provider nicht. Die Applikationsverschlüsselung schützt ruhende Daten, aber Doctolibs SaaS-Funktionen (Terminbuchung, Patientenkommunikation, Videosprechstunde) erfordern Klartextverarbeitung im laufenden Betrieb. C5 Typ 2 belegt technische Sicherheit — nicht CLOUD-Act-Immunität.
+
+**Averbis (DE) — 🟢 Strukturell souverän.** Averbis (Freiburg, Spin-off Universitätsklinikum 2007) bietet medizinische NLP-Analyse (Health Discovery) mit einer entscheidenden Architekturentscheidung: **On-Premise-Deployment ist die Standardoption.** Die eigene NLP-Engine verarbeitet klinische Texte lokal — ohne API-Calls an US-Modelle. Die Cloud-Option läuft ausschließlich auf ISO-27001- und C5-zertifizierter EU/DE-Infrastruktur, ohne permanente Datenhaltung. Kein US-Eigentümer, keine US-Tochter, keine US-KI-Abhängigkeit. Für Kliniken und GKVen, die medizinische Textanalyse benötigen, ist Averbis der Nachweis, dass souveräne Gesundheits-KI in Deutschland existiert — made in Freiburg.
+
+| Anbieter | Sitz | KI-Backend | Infrastruktur | Risiko | Eignung § 393 Klasse 1 |
+|---|---|---|---|---|---|
+| **Plaud AI** | CN (Shenzhen) | OpenAI Whisper + GPT (US) | AWS Oregon (US) | 🔴 Dreifach (CN + US-Cloud + US-KI) | ❌ Nicht geeignet |
+| **Tandem Health** | SE (Stockholm) | OpenAI Whisper + GPT-4 | "EU-Rechenzentren" (Details offen) | 🟡 EU-Firma, aber OpenAI-Abhängigkeit | ⚠️ Nur wenn Azure EU + Risikoakzeptanz |
+| **Doctolib** | FR (Paris) | Eigene Plattform | AWS Frankfurt/Paris (C5 Typ 2) | 🟡 FR-Firma auf US-Infra, verschlüsselt | ⚠️ Verschlüsselung reduziert, eliminiert nicht |
+| **Averbis** | DE (Freiburg) | Eigene NLP-Engine | On-Premise oder DE-Cloud (C5) | 🟢 Vollständig souverän | ✅ On-Premise: kein CLOUD-Act-Risiko |
+
+> **Das Muster:** Je weiter rechts im Spektrum (eigene Modelle, eigene Infrastruktur, EU-Eigentümer), desto geringer das CLOUD-Act-Risiko. Plaud demonstriert das Worst-Case-Szenario: Ein nicht-EU-Unternehmen sendet Arzt-Patienten-Gespräche an US-Server und US-KI. Averbis demonstriert das Best-Case: Deutsche NLP, deutsches Hosting, deutscher Eigentümer, On-Premise-Option.
 
 #### Vibecoding-Plattformen — KI-Entwicklung mit doppelter Bindung
 
@@ -2158,4 +2179,4 @@ Zwölf Kernaussagen:
 
 ---
 
-*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 17.0, April 2026. 189 Quellen. Es stellt keine Rechtsberatung dar.*
+*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 18.0, April 2026. 189 Quellen. Es stellt keine Rechtsberatung dar.*
