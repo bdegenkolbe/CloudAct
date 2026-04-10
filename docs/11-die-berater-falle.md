@@ -44,7 +44,7 @@ OpenAI Frontier läuft auf Azure — Microsoft ist der exklusive Cloud-Partner v
 
 **Oracle — der übersehene Vierte:**
 
-Oracle (NYSE: ORCL, Austin/Texas) ist im deutschen Gesundheitswesen in einer einzigartigen Doppelposition: Erstens als KIS-Anbieter (i.s.h.med via Oracle Cerner, ~250 deutsche Kliniken), zweitens als Cloud-Anbieter (Oracle Cloud Infrastructure / OCI), auf den Oracle bestehende Kunden im Zuge der SAP-IS-H-Abkündigung migrieren will. Oracle ist damit nicht primär ein Beratungsunternehmen, aber funktional ein Systemanbieter, der eine laufende Migrationswelle aktiv steuert — und dabei dieselbe Cloud-Lock-in-Logik erzeugt wie Accenture oder IBM im Beratungskontext. Ausführliche CLOUD-Act-Bewertung von Oracle: §5.5.
+Oracle (NYSE: ORCL, Austin/Texas) ist im deutschen Gesundheitswesen in einer einzigartigen Doppelposition: Erstens als KIS-Anbieter (i.s.h.med via Oracle Cerner, ~250 deutsche Kliniken), zweitens als Cloud-Anbieter (Oracle Cloud Infrastructure / OCI), auf den Oracle bestehende Kunden im Zuge der SAP-IS-H-Abkündigung migrieren will. Oracle ist damit nicht primär ein Beratungsunternehmen, aber funktional ein Systemanbieter, der eine laufende Migrationswelle aktiv steuert — und dabei dieselbe Cloud-Lock-in-Logik erzeugt wie Accenture oder IBM im Beratungskontext. Ausführliche CLOUD-Act-Bewertung von Oracle: [§5.5](05-anbieterbewertung.md#55-juristische-detailanalysen).
 
 **IBM — die doppelte Rolle in Deutschland:**
 
@@ -88,7 +88,7 @@ Für jede Beauftragung einer externen Beratung im Kontext von Cloud-Infrastruktu
 **Zur Qualität der Empfehlung:**
 - Wurden beim Cloud-Anbietervergleich EU-souveräne Alternativen (STACKIT, plusserver, 3DS Outscale, Cloud Temple etc.) mit gleichem methodischen Aufwand evaluiert?
 - Wer hat die Evaluation der EU-Alternativen durchgeführt — und welche Qualifikationen hat das Beraterteam für EU-Cloud-Anbieter?
-- Wurde eine Datentransfer-Folgenabschätzung (TIA, §17.4) für den empfohlenen Anbieter erstellt und dem Auftraggeber übergeben?
+- Wurde eine Datentransfer-Folgenabschätzung (TIA, [§17.4](17-dsgvo-handlungsempfehlungen.md#174-datentransfer-folgenabschatzung-tia-pflichtinstrument-fur-bestehende-us-provider)) für den empfohlenen Anbieter erstellt und dem Auftraggeber übergeben?
 - Ist das CLOUD-Act-Risiko des empfohlenen Anbieters explizit im schriftlichen Beratungsergebnis adressiert?
 
 **Zur Vertragssituation:**

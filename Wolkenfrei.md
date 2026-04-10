@@ -1680,6 +1680,9 @@ Dieses Muster — regulatorische Vollständigkeit bei gleichzeitiger Zuständigk
 4. **Rheinland-Pfalz macht ernst:** Die Art.-58-Auskunftsersuchen des LfDI Rheinland-Pfalz ab März 2026 sind die erste dokumentierte anlassbezogene Prüfung von KI im Gesundheitswesen durch eine Landesaufsicht. Gesundheitsinstitutionen müssen ein vollständiges Verzeichnis aller eingesetzten KI-Tools vorhalten — inklusive der zugrundeliegenden Modelle und deren Infrastruktur. Wer nicht dokumentieren kann, welches Modell seine Arztbrief-KI antreibt und wo es läuft, riskiert einen Rechenschaftspflicht-Verstoß nach Art. 5 Abs. 2 DSGVO.
 
 5. **BfDI-Handreichung** (Dezember 2025) gilt für alle bundesunmittelbaren Stellen — das schließt die großen bundesunmittelbaren GKVen (Barmer, TK, DAK, AOK-Bundesverband) ein, die bislang im "Vakuum" operierten (s.o.). Für diese Kassen ist die BfDI-Handreichung die erste konkrete Erwartungshaltung des Bundesbeauftragten zu KI und Cloud.
+
+---
+
 ## 17. DSGVO-Handlungsempfehlungen {#17-handlungsempfehlungen}
 
 §16 zeigt: Keine Institution ist dafür zuständig, die CLOUD-Act-Exposition als Ganzes zu prüfen. Die Datenschutzaufsicht ist fragmentiert (§16.2), die DSK-Beschlüsse sind nicht rechtsverbindlich (§16.3), und Gesundheitsregulierer wie BMG, BAS und gematik adressieren IT-Sicherheit, nicht Jurisdiktion (§16.1). Diese Lücke fällt auf die einzelne Gesundheitsinstitution zurück. Die folgenden Empfehlungen berücksichtigen deshalb nicht nur die DSGVO-Anforderungen, sondern auch die konkreten Erwartungen der Aufsichtsbehörden — insbesondere die DSK-Orientierungshilfe KI (§16.3), die KBV-IT-Sicherheitsrichtlinie (ab Oktober 2025), die BfDI-KI-Handreichung (Dezember 2025) und die ersten Enforcement-Aktionen (LfDI Rheinland-Pfalz, März 2026).
@@ -1922,8 +1925,6 @@ Vier Leitfragen für jede Infrastrukturentscheidung im Gesundheitsbereich:
 **Für US-Behördenzugriff (FISA § 702, NSL):** Für Gesundheitsdaten strukturell nicht akzeptabel — nicht weil die USA ein Feind sind, sondern weil diese Instrumente den Anforderungen an Grundrechtsschutz für EU-Bürger nicht genügen.
 
 **Für den "westlichen Verbund"-Gedanken (NATO/Five Eyes):** Militärische und geheimdienstliche Kooperation legitimiert keinen anlasslosen Zugriff auf Krankenakten. Der Kategorieunterschied zwischen SIGINT (Fernmeldeaufklärung)-Kooperation und Gesundheitsdaten ist nicht akademisch — er ist die Grundlage jeder verhältnismäßigen Abwägung.
-
-
 
 ---
 

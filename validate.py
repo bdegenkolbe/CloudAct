@@ -294,7 +294,7 @@ def check_sources(text, lines):
     in_sources = False
 
     for i, line in enumerate(lines):
-        if "## 18. Quellenverzeichnis" in line:
+        if "Quellenverzeichnis" in line and line.strip().startswith("## "):
             in_sources = True
             continue
         if in_sources:

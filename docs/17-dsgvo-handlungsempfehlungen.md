@@ -1,6 +1,6 @@
 # 17. DSGVO-Handlungsempfehlungen
 
-§16 zeigt: Keine Institution ist dafür zuständig, die CLOUD-Act-Exposition als Ganzes zu prüfen. Die Datenschutzaufsicht ist fragmentiert (§16.2), die DSK-Beschlüsse sind nicht rechtsverbindlich (§16.3), und Gesundheitsregulierer wie BMG, BAS und gematik adressieren IT-Sicherheit, nicht Jurisdiktion (§16.1). Diese Lücke fällt auf die einzelne Gesundheitsinstitution zurück. Die folgenden Empfehlungen berücksichtigen deshalb nicht nur die DSGVO-Anforderungen, sondern auch die konkreten Erwartungen der Aufsichtsbehörden — insbesondere die DSK-Orientierungshilfe KI (§16.3), die KBV-IT-Sicherheitsrichtlinie (ab Oktober 2025), die BfDI-KI-Handreichung (Dezember 2025) und die ersten Enforcement-Aktionen (LfDI Rheinland-Pfalz, März 2026).
+[§16](16-aufsichts-und-regulierungslandschaft.md) zeigt: Keine Institution ist dafür zuständig, die CLOUD-Act-Exposition als Ganzes zu prüfen. Die Datenschutzaufsicht ist fragmentiert ([§16.2](16-aufsichts-und-regulierungslandschaft.md#162-datenschutzaufsicht-flickenteppich-bei-microsoft-365-azure)), die DSK-Beschlüsse sind nicht rechtsverbindlich ([§16.3](16-aufsichts-und-regulierungslandschaft.md#163-dsk-und-landesaufsichts-hinweise-zu-cloud-und-ki-im-gesundheitswesen)), und Gesundheitsregulierer wie BMG, BAS und gematik adressieren IT-Sicherheit, nicht Jurisdiktion ([§16.1](16-aufsichts-und-regulierungslandschaft.md#161-wer-ist-zustandig-und-wofur-nicht)). Diese Lücke fällt auf die einzelne Gesundheitsinstitution zurück. Die folgenden Empfehlungen berücksichtigen deshalb nicht nur die DSGVO-Anforderungen, sondern auch die konkreten Erwartungen der Aufsichtsbehörden — insbesondere die DSK-Orientierungshilfe KI ([§16.3](16-aufsichts-und-regulierungslandschaft.md#163-dsk-und-landesaufsichts-hinweise-zu-cloud-und-ki-im-gesundheitswesen)), die KBV-IT-Sicherheitsrichtlinie (ab Oktober 2025), die BfDI-KI-Handreichung (Dezember 2025) und die ersten Enforcement-Aktionen (LfDI Rheinland-Pfalz, März 2026).
 
 ## 17.1 Sofortmaßnahmen — Priorität hoch
 
@@ -11,7 +11,7 @@
 | **3** | C5-Testat neu einordnen | Auch C5:2026 (April 2026, 168 Kriterien) belegt **technische Sicherheit**, nicht rechtliche Souveränität. Azure hat C5 und unterliegt dem CLOUD Act. plusserver/STACKIT haben C5 und unterliegen ihm strukturell nicht. Delos Cloud hat BSI Cloud Platform Requirements — strenger als C5. BSI und ANSSI haben im November 2025 gemeinsame Souveränitätskriterien angekündigt — bis zu deren Veröffentlichung bleibt C5 allein kein Souveränitätsnachweis. |
 | **4** | DPF nicht als Schutzschild | Das Data Privacy Framework basiert auf einem Präsidialerlass. PCLOB-Aufsicht ausgehöhlt seit Jan. 2025. Schrems III läuft. Keine Infrastrukturentscheidungen auf DPF-Dauerhaftigkeit bauen. |
 | **5** | Operator-Modell prüfen | Für Organisationen tief in Microsoft 365 oder Azure integriert: Delos Cloud GmbH (SAP-Tochter) als souveräner Betreiber von Azure-Technologie prüfen. BSI Cloud Platform Requirements erfüllt, VS-NfD-fähig. Preisaufschlag: +15% auf Microsoft-Listenpreise. |
-| **6** | KI-Inventar erstellen | Vollständiges Verzeichnis aller eingesetzten KI-Tools — inklusive Einsatzzweck, zugrundeliegende Modelle und deren Infrastruktur. Seit März 2026 verlangt der LfDI Rheinland-Pfalz genau diese Dokumentation per Art.-58-Auskunftsersuchen (§16.3). Fehlende Dokumentation = Rechenschaftspflicht-Verstoß (Art. 5 Abs. 2 DSGVO). Für LLM-basierte Anwendungen (Arztbrief-KI, Transkription, Kodierung): DSFA nach Art. 35 DSGVO erforderlich (DSK-Orientierungshilfe KI, Juni 2025). |
+| **6** | KI-Inventar erstellen | Vollständiges Verzeichnis aller eingesetzten KI-Tools — inklusive Einsatzzweck, zugrundeliegende Modelle und deren Infrastruktur. Seit März 2026 verlangt der LfDI Rheinland-Pfalz genau diese Dokumentation per Art.-58-Auskunftsersuchen ([§16.3](16-aufsichts-und-regulierungslandschaft.md#163-dsk-und-landesaufsichts-hinweise-zu-cloud-und-ki-im-gesundheitswesen)). Fehlende Dokumentation = Rechenschaftspflicht-Verstoß (Art. 5 Abs. 2 DSGVO). Für LLM-basierte Anwendungen (Arztbrief-KI, Transkription, Kodierung): DSFA nach Art. 35 DSGVO erforderlich (DSK-Orientierungshilfe KI, Juni 2025). |
 
 ## 17.2 Das Vier-Stufen-Modell — welche Stufe für welchen Workload
 
@@ -164,7 +164,7 @@ Architektur für Portabilität: Workloads, die in Containern (standardisierte So
 
 Migrationspfad für kritische Workloads: Die realistischen Kosten einer Migration — Personentage, Schulung, Ausfallzeiten, Vertragsrestlaufzeiten — sollten geschätzt und dokumentiert sein, damit die Entscheidung im Bedarfsfall schnell getroffen werden kann.
 
-Für GKVen und Kliniken gilt: Ein Anbieterwechsel für Kernsysteme dauert 6 bis 18 Monate. Wer 2026 nicht beginnt zu planen, handelt 2028 unter Druck. Die Drei-Zonen-Strategie in §17.3 ist die praktische Umsetzung dieser Reihenfolge.
+Für GKVen und Kliniken gilt: Ein Anbieterwechsel für Kernsysteme dauert 6 bis 18 Monate. Wer 2026 nicht beginnt zu planen, handelt 2028 unter Druck. Die Drei-Zonen-Strategie in [§17.3](#173-entscheidungsmatrix-workload-zuordnung) ist die praktische Umsetzung dieser Reihenfolge.
 
 ## 17.7 Verschlüsselung — wo HYOK hilft und wo nicht
 
@@ -175,7 +175,7 @@ Clientseitige Verschlüsselung mit eigener Schlüsselhoheit (HYOK — Hold Your 
 Betrifft Mitarbeitende mit Zugang zu sensiblen Gesundheitssystemen:
 
 - Reisegerät ohne lokale Mail-Caches, VPN-Zugangsdaten und Gesundheitsdaten nutzen
-- Apps vor Einreise ausloggen — CBP (US Customs and Border Protection) darf physische Geräte ohne richterlichen Herausgabebeschluss durchsuchen (vgl. §3.4)
+- Apps vor Einreise ausloggen — CBP (US Customs and Border Protection) darf physische Geräte ohne richterlichen Herausgabebeschluss durchsuchen (vgl. [§3.4](03-die-vier-us-zugriffsebenen-im-detail.md#34-cbp-grenzkontrolle-physischer-geratezugriff-ohne-beschluss))
 - Keine KRITIS-relevanten Zugangsdaten, SSH-Schlüssel oder API-Tokens auf Reisegeräten
 - Für hochsensible Positionen: dediziertes Reisegerät mit frischer Installation
 
@@ -205,13 +205,13 @@ Die Schadensersatzsummen pro Person liegen bei dokumentiertem Zugriff auf sensib
 
 **Die doppelte Haftung — Verantwortlicher und Auftragsverarbeiter.** Die Klinik, Krankenkasse oder Kassenärztliche Vereinigung ist als Verantwortlicher nach Art. 4 Nr. 7 DSGVO haftbar. Sie bestimmt Zweck und Mittel der Verarbeitung und hat nach Art. 28 Abs. 1 DSGVO die Pflicht, nur Auftragsverarbeiter einzusetzen, die hinreichende Garantien bieten. Wenn sie wissentlich einen Anbieter unter US-Jurisdiktion gewählt hat und die CLOUD-Act-Exposition nicht dokumentiert und bewertet hat, haftet sie für diese Entscheidung.
 
-Der Cloud-Anbieter haftet als Auftragsverarbeiter nach Art. 82 Abs. 2 DSGVO direkt gegenüber Betroffenen, wenn er einer CLOUD-Act-Anordnung nachgekommen ist, ohne den Verantwortlichen zu informieren und ohne alle verfügbaren Rechtsmittel auszuschöpfen. In der Praxis wendet sich die Aufsichtsbehörde aber zuerst an den Verantwortlichen — an die GKV oder die Klinik. Liegt kein TIA vor (vgl. §17.4), ist die Haftungsfrage schnell beantwortet.
+Der Cloud-Anbieter haftet als Auftragsverarbeiter nach Art. 82 Abs. 2 DSGVO direkt gegenüber Betroffenen, wenn er einer CLOUD-Act-Anordnung nachgekommen ist, ohne den Verantwortlichen zu informieren und ohne alle verfügbaren Rechtsmittel auszuschöpfen. In der Praxis wendet sich die Aufsichtsbehörde aber zuerst an den Verantwortlichen — an die GKV oder die Klinik. Liegt kein TIA vor (vgl. [§17.4](#174-datentransfer-folgenabschatzung-tia-pflichtinstrument-fur-bestehende-us-provider)), ist die Haftungsfrage schnell beantwortet.
 
 **Die persönliche Geschäftsführerhaftung — drei Wege, sauber getrennt.**
 
 Die DSGVO selbst kennt keine explizite persönliche GF-Haftung. Bußgelder nach Art. 83 DSGVO treffen die Organisation — die GKV, die Klinik, die KV. Nicht den Geschäftsführer als Person. Aber die persönliche Haftung kommt über zwei andere Wege:
 
-Der erste Weg ist die gesellschaftsrechtliche Organhaftung nach § 43 GmbHG beziehungsweise § 93 AktG. Wenn ein Geschäftsführer eine Entscheidung trifft, die vorhersehbar zu einem DSGVO-Bußgeld oder zu Schadensersatzansprüchen führt — etwa die bewusste Wahl eines CLOUD-Act-exponierten Anbieters ohne dokumentierte Risikoabwägung und ohne Prüfung europäischer Alternativen —, kann die Organisation ihren Geschäftsführer in Regress nehmen. Ein Bußgeld von 20 Millionen Euro oder Schadensersatzforderungen von hunderttausenden Patienten sind ein bezifferbarer Schaden, der auf eine konkrete Leitungsentscheidung zurückgeführt werden kann. Voraussetzung: Die Entscheidung beruhte nicht auf einer sorgfältigen, dokumentierten Abwägung. Liegt kein TIA vor (vgl. §17.4), fehlt genau diese Dokumentation.
+Der erste Weg ist die gesellschaftsrechtliche Organhaftung nach § 43 GmbHG beziehungsweise § 93 AktG. Wenn ein Geschäftsführer eine Entscheidung trifft, die vorhersehbar zu einem DSGVO-Bußgeld oder zu Schadensersatzansprüchen führt — etwa die bewusste Wahl eines CLOUD-Act-exponierten Anbieters ohne dokumentierte Risikoabwägung und ohne Prüfung europäischer Alternativen —, kann die Organisation ihren Geschäftsführer in Regress nehmen. Ein Bußgeld von 20 Millionen Euro oder Schadensersatzforderungen von hunderttausenden Patienten sind ein bezifferbarer Schaden, der auf eine konkrete Leitungsentscheidung zurückgeführt werden kann. Voraussetzung: Die Entscheidung beruhte nicht auf einer sorgfältigen, dokumentierten Abwägung. Liegt kein TIA vor (vgl. [§17.4](#174-datentransfer-folgenabschatzung-tia-pflichtinstrument-fur-bestehende-us-provider)), fehlt genau diese Dokumentation.
 
 Der zweite Weg ist die NIS2-Richtlinie, umgesetzt durch die BSIG-Novelle. NIS2 regelt Cybersicherheit, nicht Datenschutz — die Haftung nach § 38 BSIG greift bei Verletzung von Cybersicherheitspflichten. Ein US-Behördenzugriff per CLOUD Act ist kein Cyberangriff im klassischen Sinne. Aber NIS2 verlangt in Art. 21 Abs. 2 lit. d ausdrücklich die Bewertung von Sicherheitsrisiken in der Lieferkette — und ein CLOUD-Act-exponierter Cloud-Anbieter ist ein Lieferkettenrisiko. Wer als GKV oder Klinik unter NIS2 fällt und seine Cloud-Lieferkette nicht auf Jurisdiktionsrisiken geprüft hat, verletzt die NIS2-Sorgfaltspflicht. Für diese Verletzung haften Geschäftsführer nach § 38 BSIG persönlich — unabhängig davon, ob jemals ein US-Zugriff stattfindet.
 
@@ -240,7 +240,5 @@ Vier Leitfragen für jede Infrastrukturentscheidung im Gesundheitsbereich:
 **Für US-Behördenzugriff (FISA § 702, NSL):** Für Gesundheitsdaten strukturell nicht akzeptabel — nicht weil die USA ein Feind sind, sondern weil diese Instrumente den Anforderungen an Grundrechtsschutz für EU-Bürger nicht genügen.
 
 **Für den "westlichen Verbund"-Gedanken (NATO/Five Eyes):** Militärische und geheimdienstliche Kooperation legitimiert keinen anlasslosen Zugriff auf Krankenakten. Der Kategorieunterschied zwischen SIGINT (Fernmeldeaufklärung)-Kooperation und Gesundheitsdaten ist nicht akademisch — er ist die Grundlage jeder verhältnismäßigen Abwägung.
-
-
 
 ---
