@@ -3,7 +3,7 @@
 
 **Autor:** Björn Degenkolbe, Geschäftsführer · 4K Analytics GmbH / HIGL – Health Innovators Group Leipzig  
 **Stand:** April 2026  
-**Version:** 21.0 — April 2026 · 198 Quellen · 18 Kapitel  
+**Version:** 21.0 — April 2026 · 202 Quellen · 18 Kapitel  
 **Zweck:** Wissensgrundlage für GKV (Gesetzliche Krankenversicherung)/KV (Kassenärztliche Vereinigung)/Klinik-IT-Beratung, LinkedIn-Content, interne Architekturentscheidungen  
 **Hinweis:** Dieses Dokument basiert auf öffentlich verfügbaren Quellen, wurde mit Claude (Anthropic) erstellt und stellt keine Rechtsberatung dar.
 
@@ -1857,7 +1857,11 @@ Die Microsoft-365-Tabelle oben bildet nur eine Dimension ab: die Haltung der Auf
 | **Diskussionspapier "Rechtsgrundlagen Datenschutz + KI"** (v2.0) | LfDI Baden-Württemberg | 17.10.2024 | Rechtsgrundlage für jede KI-Phase separat erforderlich; cloud-basierte KI = eigene Rechtsgrundlage wenn Nutzerdaten Modell verbessern; EHDS-VO für sekundäre Gesundheitsdatennutzung referenziert |
 | **Checkliste "Datenschutz und KI"** + Flyer "Next-Level-Bausteine für KI" | BayLDA | 2024/2025 | AI-as-a-Service = Auftragsverarbeitung (Art. 28 DSGVO); Drittlandstransfer bei US-Anbietern prüfen; Halluzinationen und Bias in DSFA einbeziehen |
 | **Aktive KI-Prüfung im Gesundheitswesen** (Auskunftsersuchen nach Art. 58 Abs. 1 lit. a DSGVO) | LfDI Rheinland-Pfalz | März 2026 | **Erste dokumentierte Enforcement-Aktion KI + Gesundheitswesen:** Prüft KI-Telefonanlagen, KI-Dokumentenmanagement, KI-Websites in Arztpraxen; verlangt vollständiges Verzeichnis aller KI-Tools inkl. Einsatzzweck und zugrundeliegende Modelle; fehlende Dokumentation = Verstoß gegen Rechenschaftspflicht |
-| **CEF Cloud-Nutzung öffentlicher Stellen** | EDPB (7 deutsche Landesbehörden beteiligt) | 2023 (Bericht) | Koordinierte Prüfung der Cloud-Nutzung durch öffentliche Stellen inkl. Gesundheitswesen; Ergebnisbericht mit Empfehlungen zu Auftragsverarbeitung und Drittlandstransfer |
+| **Positionspapier "Kriterien für Souveräne Clouds"** | DSK | 11.05.2023 | Souveräne Cloud nur wenn Verantwortlicher Datenschutzpflichten "wirksam, überprüfbar und dauerhaft" erfüllen kann; Drittlandszugriffsrisiko muss **ausgeschlossen** sein; Open-Source-Basis empfohlen; offene Standards und Exportmöglichkeiten |
+| **Empfehlungen zu KI-Anbietern außerhalb der EU** (inkl. koordiniertes Verfahren gegen DeepSeek) | LfDI Baden-Württemberg | 2025 | Warnung vor KI-Anbietern ohne Art.-27-DSGVO-Vertreter in der EU; koordinierte Verfahren gegen DeepSeek eingeleitet; Drittstaatentransfer bei KI-as-a-Service systematisch prüfen |
+| **Orientierungshilfe Gesundheitsdatennutzungsgesetz (GDNG)** | BayLfD | Januar 2026 | Orientierungshilfe zu §§ 5 und 6 GDNG und EHDS; Muster-Einwilligung nach § 6; Living Document mit regelmäßigen Updates |
+| **Leitfaden Datenschutz in der medizinischen Forschung** (mit DGIM) | HBDI | Dezember 2025 | Vier konkrete Use Cases aus der medizinischen Forschung; Pseudonymisierung über Treuhandstelle; föderierte Datenmodelle; Living Document |
+| **CEF Cloud-Nutzung öffentlicher Stellen** | EDPB (7 deutsche Landesbehörden beteiligt) | 2023 (Bericht) | Koordinierte Prüfung der Cloud-Nutzung durch öffentliche Stellen inkl. Gesundheitswesen; nur 32 von 86 geprüften Stellen hatten vor Cloud-Einsatz eine DSFA durchgeführt; Ergebnisbericht mit Empfehlungen zu Auftragsverarbeitung und Drittlandstransfer |
 
 **Was das für Gesundheitsinstitutionen bedeutet:**
 
@@ -2223,8 +2227,12 @@ Zwölf Kernaussagen:
 - [195] LfDI Baden-Württemberg: Diskussionspapier "Rechtsgrundlagen im Datenschutz beim Einsatz von Künstlicher Intelligenz", Version 2.0, 17. Oktober 2024. Rechtsgrundlage für jede KI-Phase separat; EHDS-VO referenziert: https://www.baden-wuerttemberg.datenschutz.de/rechtsgrundlagen-datenschutz-ki/
 - [196] BayLDA: Checkliste "Datenschutz und KI" (Konsultationsentwurf) + Flyer "Next-Level-Bausteine für KI", 2024/2025. AI-as-a-Service = Auftragsverarbeitung; Drittlandstransfer prüfen: https://www.lda.bayern.de/de/ki.html
 - [197] LfDI Rheinland-Pfalz: Aktive KI-Prüfung im Gesundheitswesen — Auskunftsersuchen nach Art. 58 Abs. 1 lit. a DSGVO, März 2026. Erste dokumentierte Enforcement-Aktion KI + Gesundheitswesen: https://www.bublitzpeters.de/2026/03/12/datenschutzaufsicht-prueft-ki-einsatz-im-gesundheitswesen/
-- [198] EDPB: Report on Coordinated Enforcement Framework — Use of cloud-based services by the public sector, 2023. 7 deutsche Landesbehörden beteiligt: https://www.edpb.europa.eu/coordinated-enforcement-framework_en
+- [198] EDPB: Report on Coordinated Enforcement Framework — Use of cloud-based services by the public sector, 2023. 7 deutsche Landesbehörden beteiligt; nur 32 von 86 geprüften Stellen hatten DSFA vor Cloud-Einsatz durchgeführt: https://www.edpb.europa.eu/system/files/2023-01/edpb_20230118_cef_cloud-basedservices_publicsector_en.pdf
+- [199] DSK: Positionspapier "Kriterien für Souveräne Clouds", 11. Mai 2023. Drittlandszugriffsrisiko muss ausgeschlossen sein; Open-Source-Basis empfohlen: https://www.datenschutzkonferenz-online.de/media/weitere_dokumente/2023-05-11_DSK-Positionspapier_Kritierien-Souv-Clouds.pdf
+- [200] LfDI Baden-Württemberg: Empfehlungen zum Einsatz von KI-Anwendungen von Anbietern außerhalb der EU, 2025. Warnung vor KI-Anbietern ohne Art.-27-DSGVO-Vertreter; koordiniertes Verfahren gegen DeepSeek: https://www.baden-wuerttemberg.datenschutz.de/drittstaaten-ki/
+- [201] BayLfD: Orientierungshilfe zum Gesundheitsdatennutzungsgesetz (GDNG), Januar 2026. §§ 5 und 6 GDNG und EHDS; Muster-Einwilligung: https://www.datenschutz-bayern.de/infothek/OH_GDNG.pdf
+- [202] HBDI / DGIM: Leitfaden für Datenschutz in der medizinischen Forschung, Dezember 2025. Vier Use Cases; Pseudonymisierung; föderierte Datenmodelle: https://datenschutz.hessen.de/sites/datenschutz.hessen.de/files/2025-12/20251028_dgim_hbdi_leifaden_datenschutz_1.01.pdf
 
 ---
 
-*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 21.0, April 2026. 198 Quellen. Es stellt keine Rechtsberatung dar.*
+*Dieses Dokument basiert ausschließlich auf öffentlich zugänglichen Quellen, wurde mit Claude (Anthropic) erstellt. Version 21.0, April 2026. 202 Quellen. Es stellt keine Rechtsberatung dar.*
