@@ -520,7 +520,7 @@ Damit ist Oracle — ein US-Konzern mit Hauptsitz in Austin, Texas, NYSE: ORCL �
 
 Diese Annahme ist falsch. Der CLOUD Act knüpft an "possession, custody, or control" an — nicht an den Besitz der Hardware. Oracle Cerner hat als Managed-Service-Betreiber in der Regel administrativen Fernzugriff auf die Systeme: um Patches einzuspielen, Konfigurationen anzupassen, Fehler zu analysieren. Dieser Fernzugriff bedeutet "control" im Sinne des CLOUD Act. Es ist technisch irrelevant, wem der Server gehört — entscheidend ist, ob Oracle Cerner auf die Daten zugreifen kann. Und bei einem KIS-Managed-Service ist genau das der Fall, weil Support und Wartung eines Krankenhausinformationssystems ohne Klartextzugriff auf Patientendaten praktisch nicht möglich sind.
 
-Die Differenzierung ist dennoch wichtig: Ein Managed Service ohne Cloud-Migration ist eine geringere Exposition als eine vollständige OCI-Migration, bei der Oracle nicht nur den Zugriff, sondern auch den physischen Besitz aller Daten hat. Bei einer OCI-Migration liegt alles — Speicher, Compute, Backup — bei einem US-Hyperscaler. Beim Managed Service liegt die Infrastruktur beim Klinikum oder bei einem deutschen Betreiber; Oracle hat "nur" den administrativen Zugang. Das ist ein gradueller Unterschied, kein kategorischer. Für die DSGVO-Bewertung bleibt in beiden Fällen ein TIA erforderlich (vgl. §17.4), und in beiden Fällen muss der Auftragsverarbeitungsvertrag die CLOUD-Act-Exposition adressieren (vgl. §16.5).
+Die Differenzierung ist dennoch wichtig: Ein Managed Service ohne Cloud-Migration ist eine geringere Exposition als eine vollständige OCI-Migration, bei der Oracle nicht nur den Zugriff, sondern auch den physischen Besitz aller Daten hat. Bei einer OCI-Migration liegt alles — Speicher, Compute, Backup — bei einem US-Hyperscaler. Beim Managed Service liegt die Infrastruktur beim Klinikum oder bei einem deutschen Betreiber; Oracle hat "nur" den administrativen Zugang. Das ist ein gradueller Unterschied, kein kategorischer. Für die DSGVO-Bewertung bleibt in beiden Fällen ein TIA erforderlich (vgl. §17.4), und in beiden Fällen muss der Auftragsverarbeitungsvertrag die CLOUD-Act-Exposition adressieren (vgl. §17.5).
 
 Für Kliniken, die heute i.s.h.med im Managed-Service-Modell betreiben und eine Entscheidung über die Zukunft treffen müssen, ergibt sich eine klare Reihenfolge: Die Migration auf OCI vertieft die Exposition. Der Verbleib im Managed-Service-Modell auf eigener Infrastruktur reduziert sie relativ, löst sie aber nicht. Nur der Wechsel auf ein europäisches KIS — Dedalus, CGM, NEXUS, Meierhofer — oder ein Betriebsmodell, bei dem Oracle keinen administrativen Klartextzugriff mehr hat, eliminiert das CLOUD-Act-Risiko strukturell.
 
@@ -1646,18 +1646,6 @@ Die Microsoft-365-Tabelle bildet nur eine Dimension ab: die Haltung zu einem bes
 | **Leitfaden Datenschutz in der medizinischen Forschung** (mit DGIM) | HBDI | Dezember 2025 | Vier konkrete Use Cases aus der medizinischen Forschung; Pseudonymisierung über Treuhandstelle; föderierte Datenmodelle; Living Document |
 | **CEF Cloud-Nutzung öffentlicher Stellen** | EDPB (7 deutsche Landesbehörden beteiligt) | 2023 (Bericht) | Koordinierte Prüfung der Cloud-Nutzung durch öffentliche Stellen inkl. Gesundheitswesen; nur 32 von 86 geprüften Stellen hatten vor Cloud-Einsatz eine DSFA durchgeführt; Ergebnisbericht mit Empfehlungen zu Auftragsverarbeitung und Drittlandstransfer |
 
-**Was das für Gesundheitsinstitutionen bedeutet:**
-
-1. **Cloud-Gesundheitsanwendungen** unterliegen seit dem DSK-Beschluss November 2023 konkreten Anforderungen an Privacy by Default — Cloud-Funktionen müssen deaktivierbar sein. Jede GKV oder Klinik, die eine Cloud-basierte Gesundheitsanwendung einführt (z.B. DiGA-ähnliche Apps, Patientenportale), muss diese Anforderungen nachweisen können.
-
-2. **KI-Anwendungen** mit Cloud-Backend erfordern seit der DSK-Orientierungshilfe Mai/Juni 2025 eine eigene DSFA — insbesondere für LLMs. Das betrifft direkt die KI-Anwendungsfälle aus §7.5: Arztbrief-Generierung, Transkription, Kodierung. Wer Azure OpenAI, Google Gemini oder AWS Bedrock für Gesundheitsdaten nutzt, muss eine DSFA vorlegen, die explizit die Klartextverarbeitung und den Drittlandstransfer adressiert.
-
-3. **Confidential Cloud Computing** schützt laut DSK-Entschließung Juni 2025 **nicht** vor Provider-Zugriff — das bestätigt die CLOUD-Act-Analyse aus §1 und §13: Technische Maßnahmen allein lösen das Jurisdiktionsproblem nicht.
-
-4. **Rheinland-Pfalz macht ernst:** Die Art.-58-Auskunftsersuchen des LfDI Rheinland-Pfalz ab März 2026 sind die erste dokumentierte anlassbezogene Prüfung von KI im Gesundheitswesen durch eine Landesaufsicht. Gesundheitsinstitutionen müssen ein vollständiges Verzeichnis aller eingesetzten KI-Tools vorhalten — inklusive der zugrundeliegenden Modelle und deren Infrastruktur. Wer nicht dokumentieren kann, welches Modell seine Arztbrief-KI antreibt und wo es läuft, riskiert einen Rechenschaftspflicht-Verstoß nach Art. 5 Abs. 2 DSGVO.
-
-5. **BfDI-Handreichung** (Dezember 2025) gilt für alle bundesunmittelbaren Stellen — das schließt die großen bundesunmittelbaren GKVen (Barmer, TK, DAK, AOK-Bundesverband) ein, die bislang im "Vakuum" operierten (s.o.). Für diese Kassen ist die BfDI-Handreichung die erste konkrete Erwartungshaltung des Bundesbeauftragten zu KI und Cloud.
-
 ### 16.4 Das Gesamtbild — warum niemand das CLOUD-Act-Problem "besitzt"
 
 Die Tabelle in §16.1 zeigt das strukturelle Problem: Die CLOUD-Act-Exposition von Gesundheitsdaten fällt zwischen alle Zuständigkeiten.
@@ -1681,7 +1669,23 @@ Dieses Muster — regulatorische Vollständigkeit bei gleichzeitiger Zuständigk
 
 ---
 
+### 16.5 Was das für Gesundheitsinstitutionen konkret bedeutet
+
+1. **Cloud-Gesundheitsanwendungen** unterliegen seit dem DSK-Beschluss November 2023 konkreten Anforderungen an Privacy by Default — Cloud-Funktionen müssen deaktivierbar sein. Jede GKV oder Klinik, die eine Cloud-basierte Gesundheitsanwendung einführt (z.B. DiGA-ähnliche Apps, Patientenportale), muss diese Anforderungen nachweisen können.
+
+2. **KI-Anwendungen** mit Cloud-Backend erfordern seit der DSK-Orientierungshilfe Mai/Juni 2025 eine eigene DSFA — insbesondere für LLMs. Das betrifft direkt die KI-Anwendungsfälle aus §7.5: Arztbrief-Generierung, Transkription, Kodierung. Wer Azure OpenAI, Google Gemini oder AWS Bedrock für Gesundheitsdaten nutzt, muss eine DSFA vorlegen, die explizit die Klartextverarbeitung und den Drittlandstransfer adressiert.
+
+3. **Confidential Cloud Computing** schützt laut DSK-Entschließung Juni 2025 **nicht** vor Provider-Zugriff — das bestätigt die CLOUD-Act-Analyse aus §1 und §13: Technische Maßnahmen allein lösen das Jurisdiktionsproblem nicht.
+
+4. **Rheinland-Pfalz macht ernst:** Die Art.-58-Auskunftsersuchen des LfDI Rheinland-Pfalz ab März 2026 sind die erste dokumentierte anlassbezogene Prüfung von KI im Gesundheitswesen durch eine Landesaufsicht. Gesundheitsinstitutionen müssen ein vollständiges Verzeichnis aller eingesetzten KI-Tools vorhalten — inklusive der zugrundeliegenden Modelle und deren Infrastruktur. Wer nicht dokumentieren kann, welches Modell seine Arztbrief-KI antreibt und wo es läuft, riskiert einen Rechenschaftspflicht-Verstoß nach Art. 5 Abs. 2 DSGVO.
+
+5. **BfDI-Handreichung** (Dezember 2025) gilt für alle bundesunmittelbaren Stellen — das schließt die großen bundesunmittelbaren GKVen (Barmer, TK, DAK, AOK-Bundesverband) ein, die bislang im "Vakuum" operierten (s.o.). Für diese Kassen ist die BfDI-Handreichung die erste konkrete Erwartungshaltung des Bundesbeauftragten zu KI und Cloud.
+
+---
+
 ## 17. DSGVO-Handlungsempfehlungen {#17-handlungsempfehlungen}
+
+§16 zeigt: Keine Institution ist dafür zuständig, die CLOUD-Act-Exposition als Ganzes zu prüfen. Die Datenschutzaufsicht ist fragmentiert (§16.2), die DSK-Beschlüsse sind nicht rechtsverbindlich (§16.3), und Gesundheitsregulierer wie BMG, BAS und gematik adressieren IT-Sicherheit, nicht Jurisdiktion (§16.1). Diese Lücke fällt auf die einzelne Gesundheitsinstitution zurück. Die folgenden Empfehlungen berücksichtigen deshalb nicht nur die DSGVO-Anforderungen, sondern auch die konkreten Erwartungen der Aufsichtsbehörden — insbesondere die DSK-Orientierungshilfe KI (§16.3), die KBV-IT-Sicherheitsrichtlinie (ab Oktober 2025), die BfDI-KI-Handreichung (Dezember 2025) und die ersten Enforcement-Aktionen (LfDI Rheinland-Pfalz, März 2026).
 
 ### 17.1 Sofortmaßnahmen — Priorität hoch
 
@@ -1692,6 +1696,7 @@ Dieses Muster — regulatorische Vollständigkeit bei gleichzeitiger Zuständigk
 | **3** | C5-Testat neu einordnen | Auch C5:2026 (April 2026, 168 Kriterien) belegt **technische Sicherheit**, nicht rechtliche Souveränität. Azure hat C5 und unterliegt dem CLOUD Act. plusserver/STACKIT haben C5 und unterliegen ihm strukturell nicht. Delos Cloud hat BSI Cloud Platform Requirements — strenger als C5. BSI und ANSSI haben im November 2025 gemeinsame Souveränitätskriterien angekündigt — bis zu deren Veröffentlichung bleibt C5 allein kein Souveränitätsnachweis. |
 | **4** | DPF nicht als Schutzschild | Das Data Privacy Framework basiert auf einem Präsidialerlass. PCLOB-Aufsicht ausgehöhlt seit Jan. 2025. Schrems III läuft. Keine Infrastrukturentscheidungen auf DPF-Dauerhaftigkeit bauen. |
 | **5** | Operator-Modell prüfen | Für Organisationen tief in Microsoft 365 oder Azure integriert: Delos Cloud GmbH (SAP-Tochter) als souveräner Betreiber von Azure-Technologie prüfen. BSI Cloud Platform Requirements erfüllt, VS-NfD-fähig. Preisaufschlag: +15% auf Microsoft-Listenpreise. |
+| **6** | KI-Inventar erstellen | Vollständiges Verzeichnis aller eingesetzten KI-Tools — inklusive Einsatzzweck, zugrundeliegende Modelle und deren Infrastruktur. Seit März 2026 verlangt der LfDI Rheinland-Pfalz genau diese Dokumentation per Art.-58-Auskunftsersuchen (§16.3). Fehlende Dokumentation = Rechenschaftspflicht-Verstoß (Art. 5 Abs. 2 DSGVO). Für LLM-basierte Anwendungen (Arztbrief-KI, Transkription, Kodierung): DSFA nach Art. 35 DSGVO erforderlich (DSK-Orientierungshilfe KI, Juni 2025). |
 
 ### 17.2 Das Vier-Stufen-Modell — welche Stufe für welchen Workload
 
@@ -1921,14 +1926,6 @@ Vier Leitfragen für jede Infrastrukturentscheidung im Gesundheitsbereich:
 
 **Für den "westlichen Verbund"-Gedanken (NATO/Five Eyes):** Militärische und geheimdienstliche Kooperation legitimiert keinen anlasslosen Zugriff auf Krankenakten. Der Kategorieunterschied zwischen SIGINT (Fernmeldeaufklärung)-Kooperation und Gesundheitsdaten ist nicht akademisch — er ist die Grundlage jeder verhältnismäßigen Abwägung.
 
-### 17.11 Aufsichts- und Regulierungslandschaft
-
-Die vollständige Analyse der Aufsichts- und Regulierungslandschaft — Datenschutzaufsichtsbehörden, Gesundheitsregulierer, Selbstverwaltung und ihre jeweilige Positionierung zu Cloud und KI im Gesundheitswesen — ist in **§16** als eigenständiges Kapitel dargestellt.
----
-
-
-
-
 ---
 
 ## 18. Regulatorischer Ausblick 2025–2027 {#18-ausblick}
@@ -2000,7 +1997,7 @@ Zwölf Kernaussagen:
 
 2. **§ 393 SGB V und DSGVO Art. 48 ergänzen sich — die eine regelt IT-Sicherheit, die andere Jurisdiktion.** § 393 entbindet nicht von der DSGVO. Ein C5-konformer Anbieter unter US-Jurisdiktion erfüllt § 393, aber nicht Art. 48. Wenn US-Behörden zugreifen, ist das ein meldepflichtiger Datenschutzvorfall — unabhängig vom C5-Testat. Die Lücke liegt in der Beschaffungspraxis: C5 ist Pflicht, eine Jurisdiktionsprüfung nicht.
 
-3. **US-Hyperscaler sind de facto akzeptiert — trotz DSGVO-Widerspruch. Und der Aufsichts-Flickenteppich macht es noch verwirrender.** Das ist die ehrlichste Zusammenfassung des Status quo. Die KVNO betreibt ihre KI-Plattform auf Azure (TED 98706-2026). Kubus IT hostet GKV-Daten über Arvato bei Google Cloud. Dutzende Kliniken laufen auf Oracle OCI. Die vollständige Positionierung aller 16 Landesbehörden + BfDI + BAS ist in §16.11 dokumentiert — das Bild reicht von 🟢 (Hessen, Niedersachsen) bis 🔴 (Hamburg, Schleswig-Holstein). Wer bei der "richtigen" Aufsichtsbehörde sitzt, bekommt Azure toleriert. Das Enforcement-Gap ist das eigentliche strukturelle Problem.
+3. **US-Hyperscaler sind de facto akzeptiert — trotz DSGVO-Widerspruch. Und der Aufsichts-Flickenteppich macht es noch verwirrender.** Das ist die ehrlichste Zusammenfassung des Status quo. Die KVNO betreibt ihre KI-Plattform auf Azure (TED 98706-2026). Kubus IT hostet GKV-Daten über Arvato bei Google Cloud. Dutzende Kliniken laufen auf Oracle OCI. Die vollständige Positionierung aller 16 Landesbehörden + BfDI + BAS ist in §16.2 dokumentiert — das Bild reicht von 🟢 (Hessen, Niedersachsen) bis 🔴 (Hamburg, Schleswig-Holstein). Wer bei der "richtigen" Aufsichtsbehörde sitzt, bekommt Azure toleriert. Das Enforcement-Gap ist das eigentliche strukturelle Problem.
 
 4. **Das Operator-Modell ist der pragmatische Mittelweg** für Organisationen, die heute in Microsoft- oder Google-Ökosysteme integriert sind: Delos Cloud (SAP × Azure) für Verwaltung und Kliniken, S3NS (Thales × Google) als europäisches Referenzmodell mit SecNumCloud. Preis der Souveränität: +15% auf Listenpreise.
 

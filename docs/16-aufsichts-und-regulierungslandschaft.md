@@ -1,6 +1,6 @@
 # 16. Aufsichts- und Regulierungslandschaft: Wer den Rahmen setzt — und wer nicht durchsetzt
 
-§1.2.2 dokumentiert das Vollzugsdefizit: Kein einziges Bußgeld gegen eine Gesundheitsinstitution wegen US-Cloud-Nutzung ist öffentlich bekannt. Dieses Kapitel zeigt, warum. Die regulatorische Zuständigkeit für Cloud und KI im Gesundheitswesen ist auf mehr als ein Dutzend Institutionen verteilt — keine davon deckt das Gesamtbild ab. Das CLOUD-Act-Problem fällt systematisch zwischen die Zuständigkeiten.
+[§1.2.2](01-das-kernproblem.md#122-kein-enforcement-dokumentiertes-vollzugsdefizit) dokumentiert das Vollzugsdefizit: Kein einziges Bußgeld gegen eine Gesundheitsinstitution wegen US-Cloud-Nutzung ist öffentlich bekannt. Dieses Kapitel zeigt, warum. Die regulatorische Zuständigkeit für Cloud und KI im Gesundheitswesen ist auf mehr als ein Dutzend Institutionen verteilt — keine davon deckt das Gesamtbild ab. Das CLOUD-Act-Problem fällt systematisch zwischen die Zuständigkeiten.
 
 ## 16.1 Wer ist zuständig — und wofür nicht
 
@@ -13,7 +13,7 @@
 | **gematik** | TI-Betrieb; Zulassung von TI-Komponenten, TI-Gateways, ePA-Anbietern; C5-Testat-Liste (INA-Portal); TI 2.0 ZETA/Zero Trust (quelloffen seit Dezember 2025); Impulspapier "KI im Gesundheitswesen" (Juli 2025): FHIR-Starter-Projekt, KI für Datenstrukturierung; wird unter GDAG zur Digitalagentur mit Durchsetzungsbefugnissen | Keine DSGVO-Aufsicht; keine Jurisdiktionsprüfung bei Zulassungen; TI-Gateway-Zulassung prüft Sicherheit, nicht CLOUD-Act-Exposition; Datensouveränität als Designprinzip formuliert, aber kein Ausschluss US-basierter Gateway-Betreiber |
 | **G-BA** (Gemeinsamer Bundesausschuss) | Höchstes Beschlussgremium der gemeinsamen Selbstverwaltung; DiGA-Aufnahme (BfArM zuständig); Richtlinien für Versorgung | Keine Cloud- oder KI-spezifische Regulierung; keine Datenschutzaufsicht |
 | **BfArM** | DiGA-Zulassung; Datensicherheitsanforderungen (mit BSI) für digitale Gesundheitsanwendungen ab 01.01.2025 | Prüft Funktionstauglichkeit und Datensicherheit, nicht Cloud-Jurisdiktion des Herstellers |
-| **BSI** | IT-Sicherheit: C5-Testat, C5:2026, BSI-TR Gesundheitsanwendungen; Souveränitätskriterien angekündigt (mit ANSSI, separates Dokument) | C5 prüft Informationssicherheit, **nicht** Jurisdiktion — das ist die dokumentierte Lücke aus §1.1 |
+| **BSI** | IT-Sicherheit: C5-Testat, C5:2026, BSI-TR Gesundheitsanwendungen; Souveränitätskriterien angekündigt (mit ANSSI, separates Dokument) | C5 prüft Informationssicherheit, **nicht** Jurisdiktion — das ist die dokumentierte Lücke aus [§1.1](01-das-kernproblem.md#11-die-regelungslucke-zwischen-it-sicherheit-und-jurisdiktion) |
 | **KBV** (Kassenärztliche Bundesvereinigung) | IT-Sicherheitsrichtlinie nach § 390 SGB V (verpflichtend ab Oktober 2025); Cloud-Apps nur mit C5-Testat nach § 393; Microsoft-Cloud-Sync muss deaktiviert werden; PraxisWissen "KI in Praxen" (Mai 2025): KI = Cloud-Anwendung mit C5-Pflicht, Arzt behält Entscheidungshoheit, Patienteneinwilligung bei KI-Transkription | Cloud-Anbieterjurisdiktion nicht adressiert; Deaktivierung Microsoft-Cloud-Sync ist stärkste praktische Einschränkung, aber begründet mit Datensicherheit, nicht CLOUD Act |
 | **DKG** (Deutsche Krankenhausgesellschaft) | Positionspapier "KI im Krankenhaus" (Oktober 2025): fordert Cloud-Betrieb für KI als Notwendigkeit; KHZG-2.0-Finanzierung | Interessenvertretung, keine Aufsicht; fordert regulatorische Klarstellung, setzt sie nicht selbst |
 | **GKV-Spitzenverband** | Digitalstrategie (Dezember 2025): KI-gestützte ePA-Analyse, FDZ-Datennutzung; digitales Primärversorgungssystem | Interessenvertretung der Kassen; keine Aufsichtsfunktion; Cloud-Souveränität kein dokumentierter Schwerpunkt |
@@ -67,25 +67,13 @@ Die Microsoft-365-Tabelle bildet nur eine Dimension ab: die Haltung zu einem bes
 | **Aktive KI-Prüfung im Gesundheitswesen** (Auskunftsersuchen nach Art. 58 Abs. 1 lit. a DSGVO) | LfDI Rheinland-Pfalz | März 2026 | **Erste dokumentierte Enforcement-Aktion KI + Gesundheitswesen:** Prüft KI-Telefonanlagen, KI-Dokumentenmanagement, KI-Websites in Arztpraxen; verlangt vollständiges Verzeichnis aller KI-Tools inkl. Einsatzzweck und zugrundeliegende Modelle; fehlende Dokumentation = Verstoß gegen Rechenschaftspflicht |
 | **Positionspapier "Kriterien für Souveräne Clouds"** | DSK | 11.05.2023 | Souveräne Cloud nur wenn Verantwortlicher Datenschutzpflichten "wirksam, überprüfbar und dauerhaft" erfüllen kann; Drittlandszugriffsrisiko muss **ausgeschlossen** sein; Open-Source-Basis empfohlen; offene Standards und Exportmöglichkeiten |
 | **Empfehlungen zu KI-Anbietern außerhalb der EU** (inkl. koordiniertes Verfahren gegen DeepSeek) | LfDI Baden-Württemberg | 2025 | Warnung vor KI-Anbietern ohne Art.-27-DSGVO-Vertreter in der EU; koordinierte Verfahren gegen DeepSeek eingeleitet; Drittstaatentransfer bei KI-as-a-Service systematisch prüfen |
-| **Orientierungshilfe Gesundheitsdatennutzungsgesetz (GDNG)** | BayLfD | Januar 2026 | Orientierungshilfe zu §§ 5 und 6 GDNG und EHDS; Muster-Einwilligung nach § 6; Living Document mit regelmäßigen Updates |
+| **Orientierungshilfe Gesundheitsdatennutzungsgesetz (GDNG)** | BayLfD | Januar 2026 | Orientierungshilfe zu §[§ 5](05-anbieterbewertung.md) und 6 GDNG und EHDS; Muster-Einwilligung nach [§ 6](06-das-operator-modell.md); Living Document mit regelmäßigen Updates |
 | **Leitfaden Datenschutz in der medizinischen Forschung** (mit DGIM) | HBDI | Dezember 2025 | Vier konkrete Use Cases aus der medizinischen Forschung; Pseudonymisierung über Treuhandstelle; föderierte Datenmodelle; Living Document |
 | **CEF Cloud-Nutzung öffentlicher Stellen** | EDPB (7 deutsche Landesbehörden beteiligt) | 2023 (Bericht) | Koordinierte Prüfung der Cloud-Nutzung durch öffentliche Stellen inkl. Gesundheitswesen; nur 32 von 86 geprüften Stellen hatten vor Cloud-Einsatz eine DSFA durchgeführt; Ergebnisbericht mit Empfehlungen zu Auftragsverarbeitung und Drittlandstransfer |
 
-**Was das für Gesundheitsinstitutionen bedeutet:**
-
-1. **Cloud-Gesundheitsanwendungen** unterliegen seit dem DSK-Beschluss November 2023 konkreten Anforderungen an Privacy by Default — Cloud-Funktionen müssen deaktivierbar sein. Jede GKV oder Klinik, die eine Cloud-basierte Gesundheitsanwendung einführt (z.B. DiGA-ähnliche Apps, Patientenportale), muss diese Anforderungen nachweisen können.
-
-2. **KI-Anwendungen** mit Cloud-Backend erfordern seit der DSK-Orientierungshilfe Mai/Juni 2025 eine eigene DSFA — insbesondere für LLMs. Das betrifft direkt die KI-Anwendungsfälle aus §7.5: Arztbrief-Generierung, Transkription, Kodierung. Wer Azure OpenAI, Google Gemini oder AWS Bedrock für Gesundheitsdaten nutzt, muss eine DSFA vorlegen, die explizit die Klartextverarbeitung und den Drittlandstransfer adressiert.
-
-3. **Confidential Cloud Computing** schützt laut DSK-Entschließung Juni 2025 **nicht** vor Provider-Zugriff — das bestätigt die CLOUD-Act-Analyse aus §1 und §13: Technische Maßnahmen allein lösen das Jurisdiktionsproblem nicht.
-
-4. **Rheinland-Pfalz macht ernst:** Die Art.-58-Auskunftsersuchen des LfDI Rheinland-Pfalz ab März 2026 sind die erste dokumentierte anlassbezogene Prüfung von KI im Gesundheitswesen durch eine Landesaufsicht. Gesundheitsinstitutionen müssen ein vollständiges Verzeichnis aller eingesetzten KI-Tools vorhalten — inklusive der zugrundeliegenden Modelle und deren Infrastruktur. Wer nicht dokumentieren kann, welches Modell seine Arztbrief-KI antreibt und wo es läuft, riskiert einen Rechenschaftspflicht-Verstoß nach Art. 5 Abs. 2 DSGVO.
-
-5. **BfDI-Handreichung** (Dezember 2025) gilt für alle bundesunmittelbaren Stellen — das schließt die großen bundesunmittelbaren GKVen (Barmer, TK, DAK, AOK-Bundesverband) ein, die bislang im "Vakuum" operierten (s.o.). Für diese Kassen ist die BfDI-Handreichung die erste konkrete Erwartungshaltung des Bundesbeauftragten zu KI und Cloud.
-
 ## 16.4 Das Gesamtbild — warum niemand das CLOUD-Act-Problem "besitzt"
 
-Die Tabelle in §16.1 zeigt das strukturelle Problem: Die CLOUD-Act-Exposition von Gesundheitsdaten fällt zwischen alle Zuständigkeiten.
+Die Tabelle in [§16.1](#161-wer-ist-zustandig-und-wofur-nicht) zeigt das strukturelle Problem: Die CLOUD-Act-Exposition von Gesundheitsdaten fällt zwischen alle Zuständigkeiten.
 
 **Das BSI** prüft Informationssicherheit — nicht Jurisdiktion. C5 zertifiziert Azure, obwohl Azure dem CLOUD Act unterliegt. Das BSI weiß das, hat Souveränitätskriterien deshalb als separates Dokument angekündigt, aber noch nicht veröffentlicht.
 
@@ -95,13 +83,27 @@ Die Tabelle in §16.1 zeigt das strukturelle Problem: Die CLOUD-Act-Exposition v
 
 **Die gematik** vergibt TI-Gateway-Zulassungen, die bestimmen, über welchen Anbieter Praxen und Kliniken künftig ihre TI-Anbindung beziehen. Ob ein TI-Gateway-Betreiber dem CLOUD Act unterliegt, ist kein Zulassungskriterium. Die TI-2.0-Architektur (ZETA/Zero Trust, seit Dezember 2025 quelloffen auf GitHub) ist ein Sicherheitskonzept — kein Souveränitätskonzept.
 
-**Die Datenschutzaufsichtsbehörden** könnten das Problem adressieren — und tun es punktuell (Rheinland-Pfalz März 2026). Aber DSK-Beschlüsse sind nicht rechtsverbindlich, Prüfungen erfolgen anlassbezogen, und die 16 Landesaufsichten plus BfDI kommen zu unterschiedlichen Ergebnissen (§16.2). Die DSK hat mit dem Positionspapier "Kriterien für Souveräne Clouds" (Mai 2023) klar formuliert, dass Drittlandszugriffsrisiken **ausgeschlossen** sein müssen — aber dieses Papier hat keine Bindungswirkung und wird in Vergabeverfahren regelmäßig nicht herangezogen.
+**Die Datenschutzaufsichtsbehörden** könnten das Problem adressieren — und tun es punktuell (Rheinland-Pfalz März 2026). Aber DSK-Beschlüsse sind nicht rechtsverbindlich, Prüfungen erfolgen anlassbezogen, und die 16 Landesaufsichten plus BfDI kommen zu unterschiedlichen Ergebnissen ([§16.2](#162-datenschutzaufsicht-flickenteppich-bei-microsoft-365-azure)). Die DSK hat mit dem Positionspapier "Kriterien für Souveräne Clouds" (Mai 2023) klar formuliert, dass Drittlandszugriffsrisiken **ausgeschlossen** sein müssen — aber dieses Papier hat keine Bindungswirkung und wird in Vergabeverfahren regelmäßig nicht herangezogen.
 
 **Die Selbstverwaltung** (KBV, DKG, GKV-Spitzenverband) vertritt Interessen, hat aber keine Aufsichtsfunktion. Die DKG fordert in ihrem KI-Positionspapier (Oktober 2025) explizit Cloud-Betrieb als Notwendigkeit für KI — ohne die Jurisdiktionsfrage zu stellen. Der GKV-Spitzenverband fordert in seiner Digitalstrategie (Dezember 2025) KI-gestützte ePA-Analyse — ohne Cloud-Souveränität als Anforderung zu definieren.
 
 **Das Ergebnis:** Jede Institution erfüllt ihren Auftrag korrekt — aber niemand ist dafür zuständig, die Frage zu stellen: "Unterliegt der Cloud-Anbieter, bei dem wir Gesundheitsdaten von 74 Millionen GKV-Versicherten verarbeiten, einer US-Herausgabepflicht?" Das BSI sagt: "Nicht mein Prüfgegenstand." Das BMG sagt: "C5 regelt die Sicherheit." Das BAS sagt: nichts Öffentliches. Die gematik sagt: "Wir prüfen Sicherheit, nicht Jurisdiktion." Die Datenschutzaufsicht sagt: "Problematisch" — und verhängt kein Bußgeld.
 
-Dieses Muster — regulatorische Vollständigkeit bei gleichzeitiger Zuständigkeitslücke für das Kernrisiko — ist der institutionelle Grund für das Vollzugsdefizit aus §1.2.2. Es ist kein Versagen einzelner Behörden, sondern ein Systemdesign, das die CLOUD-Act-Frage strukturell unsichtbar macht.
+Dieses Muster — regulatorische Vollständigkeit bei gleichzeitiger Zuständigkeitslücke für das Kernrisiko — ist der institutionelle Grund für das Vollzugsdefizit aus [§1.2.2](01-das-kernproblem.md#122-kein-enforcement-dokumentiertes-vollzugsdefizit). Es ist kein Versagen einzelner Behörden, sondern ein Systemdesign, das die CLOUD-Act-Frage strukturell unsichtbar macht.
 
+
+---
+
+## 16.5 Was das für Gesundheitsinstitutionen konkret bedeutet
+
+1. **Cloud-Gesundheitsanwendungen** unterliegen seit dem DSK-Beschluss November 2023 konkreten Anforderungen an Privacy by Default — Cloud-Funktionen müssen deaktivierbar sein. Jede GKV oder Klinik, die eine Cloud-basierte Gesundheitsanwendung einführt (z.B. DiGA-ähnliche Apps, Patientenportale), muss diese Anforderungen nachweisen können.
+
+2. **KI-Anwendungen** mit Cloud-Backend erfordern seit der DSK-Orientierungshilfe Mai/Juni 2025 eine eigene DSFA — insbesondere für LLMs. Das betrifft direkt die KI-Anwendungsfälle aus [§7.5](07-das-hyperscaling-problem.md#75-ki-anbieter-und-integrationsplattformen-der-blinde-fleck-bei-klartextverarbeitung): Arztbrief-Generierung, Transkription, Kodierung. Wer Azure OpenAI, Google Gemini oder AWS Bedrock für Gesundheitsdaten nutzt, muss eine DSFA vorlegen, die explizit die Klartextverarbeitung und den Drittlandstransfer adressiert.
+
+3. **Confidential Cloud Computing** schützt laut DSK-Entschließung Juni 2025 **nicht** vor Provider-Zugriff — das bestätigt die CLOUD-Act-Analyse aus [§1](01-das-kernproblem.md) und [§13](13-clientseitige-verschluesselung.md): Technische Maßnahmen allein lösen das Jurisdiktionsproblem nicht.
+
+4. **Rheinland-Pfalz macht ernst:** Die Art.-58-Auskunftsersuchen des LfDI Rheinland-Pfalz ab März 2026 sind die erste dokumentierte anlassbezogene Prüfung von KI im Gesundheitswesen durch eine Landesaufsicht. Gesundheitsinstitutionen müssen ein vollständiges Verzeichnis aller eingesetzten KI-Tools vorhalten — inklusive der zugrundeliegenden Modelle und deren Infrastruktur. Wer nicht dokumentieren kann, welches Modell seine Arztbrief-KI antreibt und wo es läuft, riskiert einen Rechenschaftspflicht-Verstoß nach Art. 5 Abs. 2 DSGVO.
+
+5. **BfDI-Handreichung** (Dezember 2025) gilt für alle bundesunmittelbaren Stellen — das schließt die großen bundesunmittelbaren GKVen (Barmer, TK, DAK, AOK-Bundesverband) ein, die bislang im "Vakuum" operierten (s.o.). Für diese Kassen ist die BfDI-Handreichung die erste konkrete Erwartungshaltung des Bundesbeauftragten zu KI und Cloud.
 
 ---
