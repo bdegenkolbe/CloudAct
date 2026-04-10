@@ -1,5 +1,7 @@
 # 17. DSGVO-Handlungsempfehlungen
 
+§16 zeigt: Keine Institution ist dafür zuständig, die CLOUD-Act-Exposition als Ganzes zu prüfen. Die Datenschutzaufsicht ist fragmentiert (§16.2), die DSK-Beschlüsse sind nicht rechtsverbindlich (§16.3), und Gesundheitsregulierer wie BMG, BAS und gematik adressieren IT-Sicherheit, nicht Jurisdiktion (§16.1). Diese Lücke fällt auf die einzelne Gesundheitsinstitution zurück. Die folgenden Empfehlungen berücksichtigen deshalb nicht nur die DSGVO-Anforderungen, sondern auch die konkreten Erwartungen der Aufsichtsbehörden — insbesondere die DSK-Orientierungshilfe KI (§16.3), die KBV-IT-Sicherheitsrichtlinie (ab Oktober 2025), die BfDI-KI-Handreichung (Dezember 2025) und die ersten Enforcement-Aktionen (LfDI Rheinland-Pfalz, März 2026).
+
 ## 17.1 Sofortmaßnahmen — Priorität hoch
 
 | # | Maßnahme | Was konkret zu tun ist |
@@ -9,6 +11,7 @@
 | **3** | C5-Testat neu einordnen | Auch C5:2026 (April 2026, 168 Kriterien) belegt **technische Sicherheit**, nicht rechtliche Souveränität. Azure hat C5 und unterliegt dem CLOUD Act. plusserver/STACKIT haben C5 und unterliegen ihm strukturell nicht. Delos Cloud hat BSI Cloud Platform Requirements — strenger als C5. BSI und ANSSI haben im November 2025 gemeinsame Souveränitätskriterien angekündigt — bis zu deren Veröffentlichung bleibt C5 allein kein Souveränitätsnachweis. |
 | **4** | DPF nicht als Schutzschild | Das Data Privacy Framework basiert auf einem Präsidialerlass. PCLOB-Aufsicht ausgehöhlt seit Jan. 2025. Schrems III läuft. Keine Infrastrukturentscheidungen auf DPF-Dauerhaftigkeit bauen. |
 | **5** | Operator-Modell prüfen | Für Organisationen tief in Microsoft 365 oder Azure integriert: Delos Cloud GmbH (SAP-Tochter) als souveräner Betreiber von Azure-Technologie prüfen. BSI Cloud Platform Requirements erfüllt, VS-NfD-fähig. Preisaufschlag: +15% auf Microsoft-Listenpreise. |
+| **6** | KI-Inventar erstellen | Vollständiges Verzeichnis aller eingesetzten KI-Tools — inklusive Einsatzzweck, zugrundeliegende Modelle und deren Infrastruktur. Seit März 2026 verlangt der LfDI Rheinland-Pfalz genau diese Dokumentation per Art.-58-Auskunftsersuchen (§16.3). Fehlende Dokumentation = Rechenschaftspflicht-Verstoß (Art. 5 Abs. 2 DSGVO). Für LLM-basierte Anwendungen (Arztbrief-KI, Transkription, Kodierung): DSFA nach Art. 35 DSGVO erforderlich (DSK-Orientierungshilfe KI, Juni 2025). |
 
 ## 17.2 Das Vier-Stufen-Modell — welche Stufe für welchen Workload
 
@@ -237,12 +240,6 @@ Vier Leitfragen für jede Infrastrukturentscheidung im Gesundheitsbereich:
 **Für US-Behördenzugriff (FISA § 702, NSL):** Für Gesundheitsdaten strukturell nicht akzeptabel — nicht weil die USA ein Feind sind, sondern weil diese Instrumente den Anforderungen an Grundrechtsschutz für EU-Bürger nicht genügen.
 
 **Für den "westlichen Verbund"-Gedanken (NATO/Five Eyes):** Militärische und geheimdienstliche Kooperation legitimiert keinen anlasslosen Zugriff auf Krankenakten. Der Kategorieunterschied zwischen SIGINT (Fernmeldeaufklärung)-Kooperation und Gesundheitsdaten ist nicht akademisch — er ist die Grundlage jeder verhältnismäßigen Abwägung.
-
-## 17.11 Aufsichts- und Regulierungslandschaft
-
-Die vollständige Analyse der Aufsichts- und Regulierungslandschaft — Datenschutzaufsichtsbehörden, Gesundheitsregulierer, Selbstverwaltung und ihre jeweilige Positionierung zu Cloud und KI im Gesundheitswesen — ist in **§16** als eigenständiges Kapitel dargestellt.
----
-
 
 
 
