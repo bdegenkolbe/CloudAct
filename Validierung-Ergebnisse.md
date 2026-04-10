@@ -2,6 +2,97 @@
 
 ---
 
+## Validierung 10.04.2026 — Version 21.0 → Version 22.0
+
+### Änderungsumfang
+
+Umfangreiche Umstrukturierung und inhaltliche Erweiterung:
+
+1. **Neues Kapitel §16 "Aufsichts- und Regulierungslandschaft"** — eigenständiges Kapitel mit 5 Unterabschnitten, das die regulatorische Zuständigkeit für Cloud und KI im Gesundheitswesen systematisch aufarbeitet
+2. **Kapitelumstrukturierung:** §16 (Handlungsempfehlungen) → §17; §17 (Regulatorischer Ausblick) → §18; §18 (Quellen) → §19; 19 Kapitel statt 18
+3. **§16.1:** Zuständigkeitstabelle mit 14 Institutionen (BfDI, 16 Landesaufsichten, BAS, BMG, gematik, G-BA, BfArM, BSI, KBV, DKG, GKV-SV, PKV, MD Bund)
+4. **§16.2:** Microsoft 365/Azure Flickenteppich (20 Behörden, aus altem §16.11 übernommen)
+5. **§16.3:** 13 DSK-/Landesaufsichts-Dokumente zu Cloud + KI im Gesundheitswesen (neu recherchiert)
+6. **§16.4:** Synthese "Warum niemand das CLOUD-Act-Problem besitzt" (Rückbezug §1.2.2)
+7. **§16.5:** Konkrete Schlussfolgerungen für Gesundheitsinstitutionen
+8. **§17 Einleitung:** Referenziert §16-Erkenntnisse; neue Sofortmaßnahme #6 "KI-Inventar erstellen"
+9. **21 neue Quellen [190]–[210]** (BAS, BMG, gematik, KBV, DSK, EDPB, BayLDA, BayLfD, HBDI, LfDI BW, LfDI RP, AWS Lobbyregister)
+10. **mkdocs-Wiki:** Wolkenfrei.md in 21 Einzeldateien aufgeteilt, docs/-Dateien generiert via build_wiki.py
+
+### Prüfergebnis
+
+| Prüfschritt | Ergebnis | Auffälligkeiten |
+|---|---|---|
+| 2.1.1 Gliederung | ✅ | 20 ToC-Einträge = 20 H2-Überschriften, alle Anker-IDs korrekt |
+| 2.1.2 Nummerierung | ✅ | Kapitel 1–19 + Fazit lückenlos; Unterabschnitte lückenlos |
+| 2.1.3 Querverweise | ✅ | Alle §-Querverweise gültig; alle Kapitelverweise gültig; Umnummerierung §16→§17, §17→§18, §18→§19 vollständig durchgeführt |
+| 2.1.4 Roter Faden | ✅ | §16 bildet logische Brücke zwischen Analyse (§1–15) und Empfehlungen (§17); §17-Einleitung referenziert §16-Erkenntnisse; Rückbezug §1.2.2 ↔ §16.4 explizit |
+| 2.1.5 Formatierung | ✅ | Keine Artefakte (doppelte Trennlinien, überflüssige Leerzeilen) — nach manueller Bereinigung |
+| 2.2.1 Sachliche Richtigkeit | ✅ | 21 neue Quellen aus Primärquellen (DSK-PDFs, BAS-Rundschreiben, KBV-Richtlinie, BMG-Verordnungsentwürfe, Lobbyregister Bundestag); Stichprobe: DSK-Entschließung Confidential Cloud Computing Datum/Kernaussage korrekt |
+| 2.2.2 Redundanzprüfung | ✅ | §16.2 = übernommen aus altem §16.11 (kein Duplikat); §16.4 Synthese fasst §16.1–§16.3 zusammen ohne Wiederholung |
+| 2.2.3 Argumentation | ✅ | "C5 = Sicherheit ≠ Jurisdiktion" als durchgängiger roter Faden; §16.4 schließt den Bogen zu §1.2.2 (Vollzugsdefizit) |
+| 2.2.4 Ausgewogenheit | ✅ | Alle 14 Institutionen in §16.1 gleichgewichtig behandelt mit "Zuständigkeit" und "Was sie nicht prüft"; BAS/gematik nicht negativ bewertet, sondern sachlich eingeordnet |
+| 2.3.1 Tippfehler und Grammatik | ✅ | Stichprobe §16 (größter neuer Abschnitt): keine Fehler |
+| 2.3.2 Terminologie | ✅ | Neue Institutionennamen (BAS, GDAG, ZETA) bei Erstgebrauch erklärt; "KI-Inventar" als neuer Begriff eingeführt |
+| 2.4.1 Vollständigkeit und Nummerierung | ✅ | 210 Quellen [1]–[210] lückenlos; Header (210) = Abschluss (210) = Tatsächlich (210) |
+| 2.4.2 Formale Einheitlichkeit | ✅ | Quellen [190]–[210] konsistent formatiert mit Titel, Herausgeber, Datum, URL |
+| 2.4.3 Thematische Sektionierung | ✅ | Neue Quellen korrekt einsortiert (DSK-Beschlüsse, BAS, KBV, gematik, BMG) |
+| 2.4.4 Aktualität und Belastbarkeit | ✅ | Neue Quellen: BAS-Rundschreiben (2017/2018), DSK-Entschließungen (2023–2025), BfDI-Handreichung (12/2025), LfDI RP Prüfung (03/2026), BMG C5-ÄquivalenzVO (01/2025), AWS Lobbyregister — überwiegend Primärquellen |
+| 2.4.5 URL-Prüfung (Stichprobe) | ⚠️ | Nicht maschinell durchführbar; URLs aus offiziellen Behördenportalen (bundesamtsozialesicherung.de, datenschutzkonferenz-online.de, kbv.de, gematik.de) |
+| 2.4.6 Zitatgenauigkeit | ✅ | Stichprobe: DSK "Kriterien für Souveräne Clouds" — "wirksam, überprüfbar und dauerhaft" korrekt; BAS Digitalausschuss korrekt als "seit 2020" identifiziert; KBV IT-Sicherheitsrichtlinie "ab Oktober 2025" korrekt |
+| 2.5 Versionskonsistenz | ✅ | Version 22.0 an allen Stellen (Kopf + Abschluss) identisch |
+| 2.6 Automatisierte Prüfung | ✅ | validate.py: 0 Fehler; red_thread.py: 0 Fehler, 9 Warnungen (informativ — identisch mit allen früheren Validierungen) |
+
+### Gefundene Fehler (vor Bereinigung)
+
+| # | Stelle | Fehler | Schwere |
+|---|---|---|---|
+| 1 | §17 (Zeile 1683) | Fehlender Trennstrich (---) vor H2-Überschrift | Gering |
+| 2 | Vor §18 (Zeile 1928) | 3 aufeinanderfolgende Leerzeilen | Gering |
+| 3 | §5.3 (Zeile 523) | Verwaister Querverweis §16.5 (alt) statt §17.5 (neu) | Mittel |
+| 4 | Fazit (Zeile 2003) | Verwaister Querverweis §16.11 (alt) statt §16.2 (neu) | Mittel |
+| 5 | §16.2 | Doppelter Einleitungssatz "Die Positionierung aller..." | Gering |
+| 6 | §17.11 | Verwaisters Stub-Abschnitt (Verweis auf §16, überflüssig) | Gering |
+| 7 | validate.py Zeile 298 | Hardcoded "## 18. Quellenverzeichnis" statt dynamisch | Mittel |
+
+### Durchgeführte Bereinigungen
+
+| # | Fehler | Maßnahme | Erledigt |
+|---|---|---|---|
+| 1 | Fehlender --- vor §17 | Trennlinie eingefügt | ✅ |
+| 2 | Dreifach-Leerzeile vor §18 | Auf eine Leerzeile reduziert | ✅ |
+| 3 | §16.5→§17.5 in §5.3 | Querverweis korrigiert | ✅ |
+| 4 | §16.11→§16.2 im Fazit | Querverweis korrigiert | ✅ |
+| 5 | Doppelter Einleitungssatz §16.2 | Duplikat entfernt | ✅ |
+| 6 | §17.11 Stub | Abschnitt entfernt | ✅ |
+| 7 | validate.py Quellen-Suche | "## 18. Quellenverzeichnis" → dynamische Suche nach "Quellenverzeichnis" | ✅ |
+
+### Warnungen red_thread.py (informativ)
+
+9 Kapitel ohne explizite Rückverweise auf frühere Kapitel (Kap. 2, 3, 4, 6, 9, 10, 13, 14, 15). Thematisch abgegrenzte Kapitel — kein Handlungsbedarf (konsistent mit allen früheren Validierungen).
+
+### Nachprüfung
+
+- validate.py nach Bereinigung: ✅ (0 Fehler)
+- red_thread.py nach Bereinigung: ✅ (0 Fehler, 9 Warnungen informativ)
+
+### Export
+
+- Wiki (build_wiki.py): ✅ (20 Seiten, 123 §-Referenzen gemappt)
+- GitHub Wiki (build_github_wiki.py): ✅ (20 Seiten + Home.md + _Sidebar.md)
+- PDF (build_pdf.py): ✅
+- Word (pandoc): ✅ (150 KB)
+
+### Abschluss
+
+- Alle Prüfschritte nach Validierung.md vollständig durchlaufen: Ja
+- Alle Fehler behoben: Ja
+- Neue Version: 22.0
+- PDF erstellt: ✅
+- Word erstellt: ✅
+
+---
+
 ## Vollständige Validierung 09.04.2026 — Version 20.0 (gemäß Validierung.md)
 
 ### Prüfergebnis
